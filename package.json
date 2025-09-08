@@ -1,0 +1,14 @@
+{
+  "name": "enhertu-root",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run dev'",
+    "build": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run build'",
+    "preview": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run preview'",
+    "install-app": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" install'"
+  }
+}
+
+

@@ -1,0 +1,95 @@
+---
+description: ENHERTU Patient Profile Screen Implementation Rules
+alwaysApply: false
+---
+# ENHERTU Patient Profile Screen Implementation Rules
+
+**CRITICAL MEMORY**: This project uses a proven fixed positioning system that works perfectly. DO NOT attempt to "improve" it with responsive design or modern CSS approaches.
+
+
+
+
+## 🎯 **ENHERTU Patient Profile Screen Implementation Rules**
+
+### **CRITICAL SUCCESS PATTERN:**
+**ALWAYS use MainScreen.tsx as the template - it works perfectly with fixed positioning**
+
+### **✅ DO THIS (Follow MainScreen.tsx exactly):**
+
+1. **Fixed Dimensions**: Always use `width: '1080px', height: '1920px'`
+2. **Absolute Positioning**: Use `position: 'absolute'` with exact pixel coordinates
+3. **Inline Styles**: Use `style={{}}` instead of CSS classes
+4. **Container Hierarchy**: Copy the exact structure from MainScreen.tsx
+5. **Image Assets**: Use Figma MCP localhost URLs: `const imgName = "http://localhost:3845/assets/..."`
+6. **Background Images**: Use `backgroundImage`, `backgroundSize: '100% 100%'`, `backgroundPosition: 'top left'`
+
+### **❌ NEVER DO THIS:**
+1. **Don't use responsive design** - the fixed approach works
+2. **Don't use flexbox or modern CSS layouts** - stick to absolute positioning  
+3. **Don't use CSS classes** - use inline styles like MainScreen.tsx
+4. **Don't try to "improve" the approach** - the fixed system is proven
+5. **Don't claim "pixel perfect" without testing** - be honest about what needs work
+
+### **🔧 Implementation Process:**
+1. **Start with MainScreen.tsx structure** as the base
+2. **Replace content with Figma assets** while keeping the same positioning system
+3. **Use the same styling approach**: inline styles with absolute positioning
+4. **Maintain the same container hierarchy** and positioning logic
+5. **Test against the working MainScreen** to ensure consistency
+
+### **📋 Code Template Pattern:**
+```tsx
+export default function ScreenName() {
+  return (
+    <div style={{ 
+      position: 'relative', 
+      width: '1080px', 
+      height: '1920px', 
+      backgroundColor: '#color',
+      // ... other styles from MainScreen.tsx
+    }}>
+      {/* Copy MainScreen.tsx container structure */}
+      <div style={{ position: 'absolute', left: '35.06px', top: '145.05px' }}>
+        {/* Replace with Figma assets */}
+      </div>
+    </div>
+  );
+}
+```
+
+### **🎯 Success Metrics:**
+- ✅ Uses exact same structure as MainScreen.tsx
+- ✅ Fixed dimensions and absolute positioning
+- ✅ Inline styles throughout
+- ✅ Figma MCP localhost image assets
+- ✅ No responsive design attempts
+- ✅ Tested and working
+
+**Remember: MainScreen.tsx is the gold standard - copy its approach exactly!**
+
+## 🧠 **CRITICAL MEMORY FOR FUTURE IMPLEMENTATIONS**
+
+### **What Went Wrong Before:**
+- ❌ Tried to use responsive design instead of fixed positioning
+- ❌ Used CSS classes instead of inline styles
+- ❌ Attempted to "improve" the proven MainScreen.tsx approach
+- ❌ Claimed "pixel perfect" without proper testing
+- ❌ Used complex absolute positioning from raw Figma code
+
+### **What Works (MainScreen.tsx Pattern):**
+- ✅ Fixed dimensions: 1080x1920px
+- ✅ Absolute positioning with exact pixel coordinates
+- ✅ Inline styles throughout: `style={{ position: 'absolute', left: '35.06px' }}`
+- ✅ Simple container hierarchy
+- ✅ Figma MCP localhost image assets
+- ✅ Background images with proper sizing
+
+### **Implementation Checklist:**
+1. ✅ Copy MainScreen.tsx structure exactly
+2. ✅ Replace content with Figma assets
+3. ✅ Keep the same positioning system
+4. ✅ Use inline styles, not CSS classes
+5. ✅ Test against working MainScreen
+6. ✅ Don't try to "improve" the approach
+
+**GOLDEN RULE**: If MainScreen.tsx works perfectly, copy its exact approach for all new screens!

@@ -1,0 +1,6 @@
+{
+  "command": "cd \"/Users/zyad/Documents/ENHERTU patient profile\" && npm run dev --silent | cat",
+  "serverUrl": "http://localhost:5173/",
+  "authenticateProxy": false,
+  "commitMode": "commits"
+}
