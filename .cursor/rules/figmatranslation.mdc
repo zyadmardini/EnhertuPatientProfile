@@ -1,6 +1,5 @@
 ---
-description: ENHERTU Patient Profile Screen Implementation Rules
-alwaysApply: false
+alwaysApply: true
 ---
 # ENHERTU Patient Profile Screen Implementation Rules
 
@@ -11,10 +10,6 @@ alwaysApply: false
 
 ## 🎯 **ENHERTU Patient Profile Screen Implementation Rules**
 
-### **CRITICAL SUCCESS PATTERN:**
-**ALWAYS use MainScreen.tsx as the template - it works perfectly with fixed positioning**
-
-### **✅ DO THIS (Follow MainScreen.tsx exactly):**
 
 1. **Fixed Dimensions**: Always use `width: '1080px', height: '1920px'`
 2. **Absolute Positioning**: Use `position: 'absolute'` with exact pixel coordinates
@@ -22,20 +17,70 @@ alwaysApply: false
 4. **Container Hierarchy**: Copy the exact structure from MainScreen.tsx
 5. **Image Assets**: Use Figma MCP localhost URLs: `const imgName = "http://localhost:3845/assets/..."`
 6. **Background Images**: Use `backgroundImage`, `backgroundSize: '100% 100%'`, `backgroundPosition: 'top left'`
+7. **Navigation Buttons**: Always include Back Button (top-left) and Home Button (top-right) on all screens
 
 ### **❌ NEVER DO THIS:**
 1. **Don't use responsive design** - the fixed approach works
 2. **Don't use flexbox or modern CSS layouts** - stick to absolute positioning  
-3. **Don't use CSS classes** - use inline styles like MainScreen.tsx
+3. **Don't use CSS classes** - use inline styles
 4. **Don't try to "improve" the approach** - the fixed system is proven
 5. **Don't claim "pixel perfect" without testing** - be honest about what needs work
+6. **Don't ignore z-index layering** - always set explicit z-index values for overlapping elements
 
 ### **🔧 Implementation Process:**
 1. **Start with MainScreen.tsx structure** as the base
 2. **Replace content with Figma assets** while keeping the same positioning system
 3. **Use the same styling approach**: inline styles with absolute positioning
 4. **Maintain the same container hierarchy** and positioning logic
-5. **Test against the working MainScreen** to ensure consistency
+5. **Set explicit z-index values** for all overlapping elements
+6. **Test against the working MainScreen** to ensure consistency
+
+### **🎯 Z-Index Layering System (CRITICAL):**
+**ALWAYS set explicit z-index values to prevent layering issues**
+
+#### **Standard Z-Index Hierarchy:**
+- **zIndex: 1** - Background containers (light colored boxes, treatment containers)
+- **zIndex: 2** - Header bars and accent elements (colored bars, backgrounds)
+- **zIndex: 3** - Titles and headers (white text on colored backgrounds)
+- **zIndex: 4** - Main images and visual elements (patient photos, icons)
+- **zIndex: 5** - Image overlays and secondary visual elements
+- **zIndex: 6** - Text content and interactive elements (buttons, text blocks)
+
+
+#### **⚠️ Common Layering Mistakes to Avoid:**
+- ❌ **Missing z-index**: Elements render in DOM order, causing wrong layering
+- ❌ **Inconsistent z-index**: Using random values instead of systematic hierarchy
+- ❌ **Background elements on top**: Light colored containers appearing over images
+- ❌ **Text behind images**: Content becoming unreadable due to poor layering
+
+### **🔗 Navigation Buttons System (MANDATORY):**
+**ALL screens must include Back Button and Home Button for consistent navigation**
+
+#### **Back Button (Top-Left):**
+- **Position**: `top: '50px', left: '50px'`
+- **Size**: `60px × 60px`
+- **Style**: Circular, semi-transparent white background
+- **Icon**: Left arrow `←`
+- **Function**: Navigate to previous screen
+- **Z-Index**: `100` (always on top)
+
+#### **Home Button (Top-Right):**
+- **Position**: `top: '50px', right: '50px'`
+- **Size**: `60px × 60px`
+- **Style**: Circular, semi-transparent white background
+- **Icon**: Home symbol `⌂` or house icon
+- **Function**: Navigate to MainScreen
+- **Z-Index**: `100` (always on top)
+
+use reference of the buttons from code below , it has to be consistent across all pages 
+
+#### **⚠️ Navigation Button Requirements:**
+- ✅ **Always include both back and home buttons** on every screen (except MainScreen)
+- ✅ **Consistent positioning** - Back (top-left), Home (top-right)
+- ✅ **High z-index** - Always `zIndex: 100` to stay on top
+- ✅ **Proper props interface** - Include `onBackClick` and `onHomeClick`
+- ✅ **Visual consistency** - Same styling across all screens
+- ✅ **Accessibility** - Clear visual feedback and proper cursor pointer
 
 ### **📋 Code Template Pattern:**
 ```tsx
@@ -46,7 +91,7 @@ export default function ScreenName() {
       width: '1080px', 
       height: '1920px', 
       backgroundColor: '#color',
-      // ... other styles from MainScreen.tsx
+      
     }}>
       {/* Copy MainScreen.tsx container structure */}
       <div style={{ position: 'absolute', left: '35.06px', top: '145.05px' }}>
@@ -62,21 +107,26 @@ export default function ScreenName() {
 - ✅ Fixed dimensions and absolute positioning
 - ✅ Inline styles throughout
 - ✅ Figma MCP localhost image assets
+- ✅ Explicit z-index values for all overlapping elements
+- ✅ Proper visual hierarchy (backgrounds behind, images on top, text above all)
+- ✅ Navigation buttons (Back + Home) on all screens
 - ✅ No responsive design attempts
 - ✅ Tested and working
 
-**Remember: MainScreen.tsx is the gold standard - copy its approach exactly!**
+**Remember: MainScreen.tsx and the current tsx files are the gold standard - copy their approach exactly!**
 
 ## 🧠 **CRITICAL MEMORY FOR FUTURE IMPLEMENTATIONS**
 
 ### **What Went Wrong Before:**
 - ❌ Tried to use responsive design instead of fixed positioning
 - ❌ Used CSS classes instead of inline styles
-- ❌ Attempted to "improve" the proven MainScreen.tsx approach
+- ❌ Attempted to "improve" the proven approach
 - ❌ Claimed "pixel perfect" without proper testing
 - ❌ Used complex absolute positioning from raw Figma code
+- ❌ **Ignored z-index layering** - light green containers appeared over patient images
+- ❌ **Missing explicit z-index values** - elements rendered in wrong DOM order
 
-### **What Works (MainScreen.tsx Pattern):**
+### **What Works :**
 - ✅ Fixed dimensions: 1080x1920px
 - ✅ Absolute positioning with exact pixel coordinates
 - ✅ Inline styles throughout: `style={{ position: 'absolute', left: '35.06px' }}`
@@ -85,11 +135,93 @@ export default function ScreenName() {
 - ✅ Background images with proper sizing
 
 ### **Implementation Checklist:**
-1. ✅ Copy MainScreen.tsx structure exactly
 2. ✅ Replace content with Figma assets
 3. ✅ Keep the same positioning system
 4. ✅ Use inline styles, not CSS classes
-5. ✅ Test against working MainScreen
-6. ✅ Don't try to "improve" the approach
+5. ✅ **Set explicit z-index values** for all overlapping elements
+6. ✅ **Verify visual hierarchy** - backgrounds behind, images on top, text above all
+7. ✅ **Add navigation buttons** - Back (top-left) and Home (top-right)
+8. ✅ **Update props interface** - Include `onBackClick` and `onHomeClick`
+10. ✅ Don't try to "improve" the approach
 
 **GOLDEN RULE**: If MainScreen.tsx works perfectly, copy its exact approach for all new screens!
+
+## 🎬 **GSAP Page Transitions & Button Linking System**
+
+
+### **🔗 Button Linking System:**
+
+
+3. **Screen Navigation Flow**:
+   - **MainScreen** → `onSamiraClick` → **Samira1**
+   - **Samira1** → `onContinueClick` → **Samira2** | `onBackClick` → **MainScreen**
+   - **Samira2** → `onBackClick` → **Samira1** use the same flow for the next screens and identify the buttons which usually are around the center bottom of the sceen "NAMED BUTTON"
+
+### **🎯 Key Benefits of This System:**
+
+- ✅ **No Blank Frames**: Crossfade ensures smooth transitions
+- ✅ **Button Functionality Preserved**: All click handlers work during transitions
+- ✅ **Performance Optimized**: Hardware-accelerated GSAP animations
+- ✅ **Transition Prevention**: Prevents rapid clicking during animations
+- ✅ **Clean State Management**: Proper cleanup after each transition
+
+
+
+### **📋 Implementation Checklist for New Screens:**
+
+1. ✅ Add screen type to `Screen` union type
+2. ✅ Add screen ref to `screenRefs` object
+3. ✅ Create screen container with proper ref assignment
+4. ✅ Implement screen component with navigation props
+5. ✅ Add navigation buttons with proper click handlers
+
+
+ {/* Back Button - Top Left */}
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          left: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100,
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+        }}
+        onClick={onBackClick}
+      >
+        ←
+      </div>
+
+      {/* Home Button - Top Right */}
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          right: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100,
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+        }}
+        onClick={onHomeClick}
+      >
+        ⌂
+      </div>

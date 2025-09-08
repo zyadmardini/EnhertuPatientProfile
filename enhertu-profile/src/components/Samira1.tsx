@@ -5,7 +5,12 @@ const imgGroup = "http://localhost:3845/assets/808348e90d52329741ef490ca5f364fe2
 const imgVector1 = "http://localhost:3845/assets/ea6d40caed0cc5e3efe1b564ac1374474ea0738b.svg";
 const imgVector2 = "http://localhost:3845/assets/341d48a0c7406ac7cf7f218af5a5994c573e0fea.svg";
 
-export default function Samira1() {
+interface Samira1Props {
+  onContinueClick: () => void;
+  onBackClick: () => void;
+}
+
+export default function Samira1({ onContinueClick, onBackClick }: Samira1Props) {
   return (
     <div style={{ 
       position: 'relative', 
@@ -22,6 +27,30 @@ export default function Samira1() {
       paddingRight: '105px',
       gap: '85px'
     }}>
+      {/* Back Button */}
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          left: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100
+        }}
+        onClick={onBackClick}
+      >
+        ←
+      </div>
+
       {/* Main Container */}
       <div style={{ 
         position: 'relative',
@@ -32,7 +61,7 @@ export default function Samira1() {
         gap: '68.021px'
       }}>
         {/* Image Container */}
-        <div style={{ 
+        <div data-enter-group data-enter-order="0" style={{ 
           position: 'relative',
           width: '100%',
           height: '658.026px',
@@ -75,7 +104,7 @@ export default function Samira1() {
         </div>
 
         {/* Patient Name */}
-        <div style={{ 
+        <div data-enter data-enter-order="1" style={{ 
           fontFamily: 'Inter, sans-serif',
           fontWeight: 'bold',
           fontSize: '36px',
@@ -89,7 +118,7 @@ export default function Samira1() {
       </div>
 
       {/* Text Container */}
-      <div style={{ 
+      <div data-enter-group data-enter-order="2" style={{ 
         position: 'relative',
         width: '841px',
         display: 'flex',
@@ -121,11 +150,15 @@ export default function Samira1() {
         </div>
 
         {/* Bottom Logo */}
-        <div style={{ 
-          position: 'relative',
-          height: '112px',
-          width: '123px'
-        }}>
+        <div 
+          style={{ 
+            position: 'relative',
+            height: '112px',
+            width: '123px',
+            cursor: 'pointer'
+          }}
+          onClick={onContinueClick}
+        >
           <div style={{ position: 'absolute', bottom: 0, left: '1.03%', right: '7.47%', top: 0 }}>
             <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={imgVector} />
           </div>

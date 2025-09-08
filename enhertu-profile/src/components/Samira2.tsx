@@ -35,7 +35,12 @@ function ButtonTreatment({ text = "Treatment" }: ButtonTreatmentProps) {
   );
 }
 
-export default function Samira2() {
+interface Samira2Props {
+  onBackClick: () => void;
+  onContinueClick: () => void;
+}
+
+export default function Samira2({ onBackClick, onContinueClick }: Samira2Props) {
   return (
     <div style={{ 
       position: 'relative', 
@@ -44,6 +49,31 @@ export default function Samira2() {
     }}>
       {/* Background */}
       <div style={{ position: 'absolute', backgroundColor: 'white', bottom: 0, left: 0, right: '0.09%', top: 0 }} />
+      
+      {/* Back Button */}
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          left: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100,
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+        }}
+        onClick={onBackClick}
+      >
+        ←
+      </div>
       
       {/* Title */}
       <div style={{ 
@@ -56,44 +86,47 @@ export default function Samira2() {
         left: 'calc(50% - 441px)',
         width: '656px',
         height: '80px'
-      }}>
+      }} data-enter>
         <p style={{ margin: 0, lineHeight: 'normal' }}>Case Study: Samira</p>
       </div>
       
-      {/* Ellipse background */}
-      <div style={{ position: 'absolute', left: '73px', top: '276px', width: '440px', height: '440px' }}>
-        <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={imgEllipse1} />
-      </div>
-      
-      {/* Image background */}
-      <div style={{ position: 'absolute', backgroundColor: '#ec7624', left: '293px', top: '276px', width: '787px', height: '169px' }} />
-      
-      {/* Samira image */}
-      <div style={{ 
-        position: 'absolute',
-        backgroundImage: `url('${imgSamira}')`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '100% 100%',
-        backgroundPosition: 'top left',
-        top: '15.66%',
-        left: '8.33%',
-        right: '54.82%',
-        bottom: '63.97%'
-      }} />
-      
-      {/* Patient presentation text */}
-      <div style={{ 
-        position: 'absolute',
-        fontFamily: 'Inter, sans-serif',
-        fontWeight: 'bold',
-        fontSize: '45px',
-        color: 'white',
-        left: '534px',
-        top: '300px',
-        whiteSpace: 'pre'
-      }}>
-        <p style={{ margin: 0 }}>Patient presentation</p>
-        <p style={{ margin: 0 }}>at diagnosis</p>
+      {/* Hero Section */}
+      <div data-enter-group data-enter-order="2">
+        {/* Ellipse background */}
+        <div style={{ position: 'absolute', left: '73px', top: '276px', width: '440px', height: '440px' }}>
+          <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={imgEllipse1} />
+        </div>
+        
+        {/* Treatment background */}
+        <div style={{ position: 'absolute', backgroundColor: '#ec7624', left: '293px', top: '276px', width: '787px', height: '169px' }} data-enter-swipe />
+        
+        {/* Samira image */}
+        <div style={{ 
+          position: 'absolute',
+          backgroundImage: `url('${imgSamira}')`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'top left',
+          top: '15.66%',
+          left: '8.33%',
+          right: '54.82%',
+          bottom: '63.97%'
+        }} />
+        
+        {/* Patient presentation text */}
+        <div style={{ 
+          position: 'absolute',
+          fontFamily: 'Inter, sans-serif',
+          fontWeight: 'bold',
+          fontSize: '45px',
+          color: 'white',
+          left: '534px',
+          top: '300px',
+          whiteSpace: 'pre'
+        }}>
+          <p style={{ margin: 0 }}>Patient presentation</p>
+          <p style={{ margin: 0 }}>at diagnosis</p>
+        </div>
       </div>
       
       {/* Header background gradient */}
@@ -107,18 +140,18 @@ export default function Samira2() {
       }} />
       
       {/* Case study content */}
-      <div style={{ 
+      <div style={{
         position: 'absolute',
         fontFamily: 'Inter, sans-serif',
         fontWeight: 'bold',
         fontSize: '31px',
         color: 'black',
-        left: '73px',
-        top: '807px',
+        left: '87px',
+        top: '751px',
         width: '759px',
         height: '920px'
-      }}>
-        <ul style={{ 
+      }} data-enter-group data-enter-order="3">
+        <ul style={{
           listStyleType: 'disc',
           paddingLeft: '46.5px',
           margin: 0
@@ -133,16 +166,22 @@ export default function Samira2() {
             <span style={{ lineHeight: '54px' }}>ECOG PS 1</span>
           </li>
           <li style={{ marginBottom: 0, marginLeft: '46.5px' }}>
-            <span style={{ lineHeight: '54px' }}>Regular screening with mammography, alongside bilateral breast ultrasound, identified an area of irregular parenchymal thickening with microcalcifications</span>
+            <span style={{ lineHeight: '54px' }}>Regular screening with mammography, -alongside bilateral
+              breast ultrasound, identified an area of irregular
+              parenchymal thickening with microcalcifications</span>
           </li>
           <li style={{ marginBottom: 0, marginLeft: '46.5px' }}>
-            <span style={{ lineHeight: '54px' }}>Breast ultrasound showed a 41 mm solid nodule, and axillary lymphadenopathies with preserved morphology and structure were observed</span>
+            <span style={{ lineHeight: '54px' }}>Breast ultrasound showed a 41 mm solid nodule, and
+              axillary lymphadenopathies with preserved morphology and
+              structure were observed</span>
           </li>
           <li style={{ marginBottom: 0, marginLeft: '46.5px' }}>
-            <span style={{ lineHeight: '54px' }}>Diagnosed with HER2-positive infiltrating ductal carcinoma in May 2021</span>
+            <span style={{ lineHeight: '54px' }}>Diagnosed with HER2-positive infiltrating ductal
+              carcinoma in May 2021</span>
           </li>
           <li style={{ marginBottom: 0, marginLeft: '46.5px' }}>
-            <span style={{ lineHeight: '54px' }}>ER-positive/PR-positive/HER2-positive (IHC2+/FISH amplified)</span>
+            <span style={{ lineHeight: '54px' }}>ER-positive/PR-positive/HER2-positive (IHC2+/FISH
+              amplified)</span>
           </li>
           <li style={{ marginLeft: '46.5px' }}>
             <span style={{ lineHeight: '54px' }}>Metastasis in the liver identified in July 2021</span>
@@ -166,7 +205,12 @@ export default function Samira2() {
       </div>
       
       {/* Treatment button */}
-      <div style={{ position: 'absolute', left: '191px', top: '1727px', width: '699px', height: '112px' }}>
+      <div 
+        style={{ position: 'absolute', left: '191px', top: '1727px', width: '699px', height: '112px', cursor: 'pointer', zIndex: 100 }}
+        onClick={onContinueClick}
+        data-enter
+        data-enter-order="4"
+      >
         <ButtonTreatment />
       </div>
     </div>

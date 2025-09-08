@@ -1,0 +1,78 @@
+---
+description: Attribute-driven GSAP enter animations for screens
+alwaysApply: true
+---
+# GSAP Enter Animations — Attribute-Driven Workflow
+
+CRITICAL MEMORY: Do not write page-specific GSAP code. Use the centralized `animateEnter()` utility and lightweight `data-*` attributes to drive enter animations on any screen.
+
+## Required Files & Locations
+- Utility: `enhertu-profile/src/animations/enter.ts` (exports `animateEnter(opts)`).
+- Global CSS: `enhertu-profile/src/tailwind.css` contains baseline under `[data-entering]` selectors.
+- Hook: `enhertu-profile/src/App.tsx` triggers `animateEnter({ root: nextScreenRef })` after screen transition completes.
+
+## How To Add Animations To A Screen (React)
+1) Mark elements in the screen component with attributes:
+- Single element: add `data-enter`
+- Group stagger: add `data-enter-group` to a container; its direct children will stagger
+- Optional ordering: `data-enter-order="1|2|..."`
+- Optional timing: `data-enter-delay="0.2"`, `data-enter-stagger="0.08"`
+
+Example (inside a component like `Samira1.tsx`):
+```tsx
+<div data-enter-group /* hero visuals */> ...children... </div>
+<div data-enter data-enter-order="1">Heading or name</div>
+<section data-enter-group data-enter-order="2"> ...content... </section>
+```
+
+2) Ensure the app calls the utility after navigation:
+- In `enhertu-profile/src/App.tsx`, after the crossfade completes and the new screen is visible, call:
+```ts
+animateEnter({ root: nextScreenRef })
+```
+
+3) Baseline CSS to avoid FOUC (already added):
+- Only applies while the screen container has `data-entering` (set/removed by the utility):
+```css
+[data-entering] [data-enter],
+[data-entering] [data-enter-group] > * {
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
+  will-change: transform, opacity;
+}
+```
+
+## Utility Behavior (do not change)
+- Sets initial state with GSAP, builds a timeline with default `duration=0.6`, `ease=power2.out`, `stagger=0.06`.
+- Orders singles by `data-enter-order` (ascending).
+- Staggers groups’ direct children; honors per-group `data-enter-delay` and `data-enter-stagger`.
+- Adds `data-entering` to `root` at start; removes it on timeline complete.
+- Respects `prefers-reduced-motion: reduce` (aborts animation).
+- Does NOT use `clearProps` so final styles persist (elements stay visible).
+
+## Do / Don’t
+Do:
+- Use only `data-enter` / `data-enter-group` / `data-enter-order` / `data-enter-delay` / `data-enter-stagger` to control sequencing.
+- Keep animations subtle (opacity/scale/y) to match the design language.
+- Target meaningful groups (hero image block, heading, content group, CTA) rather than every small leaf node.
+
+Don’t:
+- Don’t add per-screen GSAP timelines or imperative code in components.
+- Don’t remove or bypass the `[data-entering]` CSS scope.
+- Don’t animate the whole screen container — animate inner elements for depth.
+- Don’t use heavy effects (filters, shadows) during enter.
+
+## Checklist When Adding A New Screen
+- [ ] Attributes added to key elements/groups in the component
+- [ ] `App.tsx` hook exists and calls `animateEnter({ root: nextScreenRef })`
+- [ ] Global CSS baseline present in `tailwind.css`
+- [ ] Quick manual test: navigate to the screen → elements stagger in and remain visible
+- [ ] Reduced motion verified (no animation when enabled)
+
+## Example Mapping (Samira Screens)
+- Samira1: hero vectors/photo → `data-enter-group`; name → `data-enter`; disclaimer + logo → `data-enter-group` with higher `data-enter-order`.
+- Samira2: title → `data-enter`; image cluster → `data-enter-group`; list items → either within one `data-enter-group` container or left as static.
+
+GOLDEN RULE: When asked to “add animations”, only add data attributes to the screen’s JSX and rely on the shared `animateEnter()` call in `App.tsx` — no custom timelines per screen.
+
+#### Use Swipe animation `data-enter-swipe` if element name is treatment background

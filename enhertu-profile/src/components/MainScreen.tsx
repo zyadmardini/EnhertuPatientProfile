@@ -15,7 +15,11 @@ const imgRectangle4 = "http://localhost:3845/assets/c0b63a220fb0120f05a07ee0bb54
 const imgRectangle6 = "http://localhost:3845/assets/b13d17266d13676b59998a7bdacdaa37df6bae5c.svg";
 
 
-export default function MainScreen() {
+interface MainScreenProps {
+  onSamiraClick: () => void;
+}
+
+export default function MainScreen({ onSamiraClick }: MainScreenProps) {
   return (
     <div style={{ 
       position: 'relative', 
@@ -63,17 +67,20 @@ export default function MainScreen() {
         height: '1444px'
       }}>
         {/* Header */}
-        <div style={{ 
-          position: 'absolute',
-          left: '139.99px',
-          top: '0px',
-          width: '707.02px',
-          height: '88.516px',
-          display: 'flex', 
-          alignItems: 'flex-end', 
-          justifyContent: 'flex-start',
-          gap: '61.703px'
-        }}>
+        <div 
+          data-enter-group
+          data-enter-order="1"
+          style={{ 
+            position: 'absolute',
+            left: '139.99px',
+            top: '0px',
+            width: '707.02px',
+            height: '88.516px',
+            display: 'flex', 
+            alignItems: 'flex-end', 
+            justifyContent: 'flex-start',
+            gap: '61.703px'
+          }}>
           <div style={{ height: '82.302px', width: '73.317px', marginTop: '6.214px' }}>
             <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={imgLogoContainer} />
           </div>
@@ -108,13 +115,20 @@ export default function MainScreen() {
             height: '605.519px'
           }}>
             {/* Samira */}
-            <div style={{ 
-              position: 'absolute',
-              left: '15.014px',
-              top: '0.345px',
-              width: '447.004px',
-              height: '604.829px'
-            }}>
+            <div 
+              data-enter
+              data-enter-order="2"
+              data-enter-delay="0.2"
+              style={{ 
+                position: 'absolute',
+                left: '15.014px',
+                top: '0.345px',
+                width: '447.004px',
+                height: '604.829px',
+                cursor: 'pointer'
+              }}
+              onClick={onSamiraClick}
+            >
               <div style={{ 
                 height: '440px', 
                 width: '448px',
@@ -161,13 +175,17 @@ export default function MainScreen() {
             </div>
             
             {/* Layla */}
-            <div style={{ 
-              position: 'absolute',
-              left: '501.074px',
-              top: '0px',
-              width: '447.004px',
-              height: '605.519px'
-            }}>
+            <div 
+              data-enter
+              data-enter-order="3"
+              data-enter-delay="0.2"
+              style={{ 
+                position: 'absolute',
+                left: '501.074px',
+                top: '0px',
+                width: '447.004px',
+                height: '605.519px'
+              }}>
               <div style={{ 
                 height: '441px', 
                 width: '448px',
@@ -222,13 +240,17 @@ export default function MainScreen() {
             height: '594.986px'
           }}>
             {/* Rawan */}
-            <div style={{ 
-              position: 'absolute',
-              left: '0px',
-              top: '0px',
-              width: '447.005px',
-              height: '594.986px'
-            }}>
+            <div 
+              data-enter
+              data-enter-order="4"
+              data-enter-delay="0.2"
+              style={{ 
+                position: 'absolute',
+                left: '0px',
+                top: '0px',
+                width: '447.005px',
+                height: '594.986px'
+              }}>
               <div style={{ 
                 height: '441px', 
                 width: '448px',
@@ -274,13 +296,17 @@ export default function MainScreen() {
             </div>
             
             {/* Hala */}
-            <div style={{ 
-              position: 'absolute',
-              left: '526.756px',
-              top: '0px',
-              width: '436.336px',
-              height: '594.986px'
-            }}>
+            <div 
+              data-enter
+              data-enter-order="5"
+              data-enter-delay="0.2"
+              style={{ 
+                position: 'absolute',
+                left: '526.756px',
+                top: '0px',
+                width: '436.336px',
+                height: '594.986px'
+              }}>
               <div style={{ 
                 position: 'relative',
                 height: '439.637px', 
@@ -354,13 +380,17 @@ export default function MainScreen() {
       </div>
       
       {/* Footer */}
-      <div style={{ 
-        position: 'absolute',
-        left: '84.002px',
-        top: '1692.215px',
-        height: '149px', 
-        width: '917px'
-      }}>
+      <div 
+        data-enter
+        data-enter-order="6"
+        data-enter-delay="0.4"
+        style={{ 
+          position: 'absolute',
+          left: '84.002px',
+          top: '1692.215px',
+          height: '149px', 
+          width: '917px'
+        }}>
         <div style={{ 
           position: 'absolute', 
           height: '82px', 
