@@ -7,10 +7,14 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run dev'",
-    "build": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run build'",
-    "preview": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run preview'",
-    "install-app": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" install'"
+    "dev": "npm --prefix \"enhertu-profile\" run dev",
+    "build": "npm --prefix \"enhertu-profile\" run build",
+    "preview": "npm --prefix \"enhertu-profile\" run preview",
+    "install-app": "npm --prefix \"enhertu-profile\" install",
+    "dev:local": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run dev'",
+    "build:local": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run build'",
+    "preview:local": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" run preview'",
+    "install-app:local": "bash -lc 'source ~/.nvm/nvm.sh && nvm use 20 >/dev/null && npm --prefix \"enhertu-profile\" install'"
   }
 }
 
