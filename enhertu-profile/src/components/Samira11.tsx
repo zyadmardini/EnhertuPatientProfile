@@ -11,7 +11,7 @@ interface Samira11Props {
   onEndClick: () => void;
 }
 
-export default function Samira11({ onBackClick, onHomeClick, onEndClick }: Samira11Props): JSX.Element {
+export default function Samira11({ onBackClick, onHomeClick, onEndClick }: Samira11Props) {
   return (
     <div style={{ 
       position: 'relative', 

@@ -1,8 +1,8 @@
 // Image assets from Figma MCP
 const imgButtonContainer = "http://localhost:3845/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
 const imgIconContainer = "http://localhost:3845/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
-const imgVector = "http://localhost:3845/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
-const imgGroup = "http://localhost:3845/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
+// const imgVector = "http://localhost:3845/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
+// const imgGroup = "http://localhost:3845/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
 const imgVector1 = "http://localhost:3845/assets/0492412761c8509e31e902d4f01c535a5b33ea9d.svg";
 const imgVector2 = "http://localhost:3845/assets/955575a9c724c363258e4b21ead3b46a80bfb6e6.svg";
 
