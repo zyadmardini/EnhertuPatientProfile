@@ -1,7 +1,6 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "cd enhertu-profile && npm install && npm run build",
   "outputDirectory": "enhertu-profile/dist",
-  "installCommand": "npm run install-app",
   "framework": null,
   "nodeVersion": "20.x"
 }
