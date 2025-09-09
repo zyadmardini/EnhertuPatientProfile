@@ -1,6 +1,6 @@
 // Image assets from Figma MCP
-const imgButton = "http://localhost:3845/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
-const imgButtonIcon = "http://localhost:3845/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
+const imgButton = "/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
+const imgButtonIcon = "/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
 
 interface Samira8Props {
   onBackClick: () => void;

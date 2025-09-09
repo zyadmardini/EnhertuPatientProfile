@@ -1,7 +1,7 @@
 // Image assets from Figma MCP
-const imgVector = "http://localhost:3845/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
-const imgGroup = "http://localhost:3845/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
-const imgIconContainer = "http://localhost:3845/assets/9f064e7469cf4c412994cd586bf5f892223a6a46.svg";
+const imgVector = "/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
+const imgGroup = "/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
+const imgIconContainer = "/assets/9f064e7469cf4c412994cd586bf5f892223a6a46.svg";
 
 interface Samira4Props {
   onBackClick: () => void;

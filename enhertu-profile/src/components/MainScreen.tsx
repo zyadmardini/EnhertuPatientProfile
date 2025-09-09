@@ -1,18 +1,18 @@
 // Image assets from Figma MCP
-const imgSamira = "http://localhost:3845/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
-const imgLayla = "http://localhost:3845/assets/6067c24d639d7f53d8e02f54bb206f202603bae2.png";
-const imgRawan = "http://localhost:3845/assets/7a436235d6ca2c93df28cc7b436bf16e5f547a89.png";
-const imgRectangle = "http://localhost:3845/assets/9a1a2ff291c25a4c4d9f1a6afa74db2145c7289f.png";
-const imgRectangle3 = "http://localhost:3845/assets/b1e07bba62b74412085777b8615576fe1675df2b.png";
-const imgRectangle5 = "http://localhost:3845/assets/739e8ffddd0a204f9d32d1d29746484413531536.png";
-const imgGroup = "http://localhost:3845/assets/7cea05f9e479e26e68d418e9f103f3ca6341950e.svg";
-const imgGroup1 = "http://localhost:3845/assets/e846be4806700cba6a04b85875a09240d9a16601.svg";
-const imgLogoContainer = "http://localhost:3845/assets/bba9e41063c51cc6af565dac1f9be78110d748f5.svg";
-const imgRectangle1 = "http://localhost:3845/assets/1415150a9a5ad09578102bea03302c348276cce1.svg";
-const imgRectangle2 = "http://localhost:3845/assets/65a917a95ec4327e2da704d3cdbc0cfd3e8a2d79.svg";
-const imgVector = "http://localhost:3845/assets/b54881f76a1d3a7fbe0dc8639e89f85a9e9201cb.svg";
-const imgRectangle4 = "http://localhost:3845/assets/c0b63a220fb0120f05a07ee0bb543bcd6909f177.svg";
-const imgRectangle6 = "http://localhost:3845/assets/b13d17266d13676b59998a7bdacdaa37df6bae5c.svg";
+const imgSamira = "/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
+const imgLayla = "/assets/6067c24d639d7f53d8e02f54bb206f202603bae2.png";
+const imgRawan = "/assets/7a436235d6ca2c93df28cc7b436bf16e5f547a89.png";
+const imgRectangle = "/assets/9a1a2ff291c25a4c4d9f1a6afa74db2145c7289f.png";
+const imgRectangle3 = "/assets/b1e07bba62b74412085777b8615576fe1675df2b.png";
+const imgRectangle5 = "/assets/739e8ffddd0a204f9d32d1d29746484413531536.png";
+const imgGroup = "/assets/7cea05f9e479e26e68d418e9f103f3ca6341950e.svg";
+const imgGroup1 = "/assets/e846be4806700cba6a04b85875a09240d9a16601.svg";
+const imgLogoContainer = "/assets/bba9e41063c51cc6af565dac1f9be78110d748f5.svg";
+const imgRectangle1 = "/assets/1415150a9a5ad09578102bea03302c348276cce1.svg";
+const imgRectangle2 = "/assets/65a917a95ec4327e2da704d3cdbc0cfd3e8a2d79.svg";
+const imgVector = "/assets/b54881f76a1d3a7fbe0dc8639e89f85a9e9201cb.svg";
+const imgRectangle4 = "/assets/c0b63a220fb0120f05a07ee0bb543bcd6909f177.svg";
+const imgRectangle6 = "/assets/b13d17266d13676b59998a7bdacdaa37df6bae5c.svg";
 
 
 interface MainScreenProps {

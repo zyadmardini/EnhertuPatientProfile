@@ -1,6 +1,6 @@
 // Image assets from Figma MCP
-const imgRectangle = "http://localhost:3845/assets/3e9970ddda17ebf235d24396df2b7b4d600d4466.png";
-const imgRectangle1 = "http://localhost:3845/assets/e092922d4f4e41aa6af343efbbec9d76d019f1c0.svg";
+const imgRectangle = "/assets/3e9970ddda17ebf235d24396df2b7b4d600d4466.png";
+const imgRectangle1 = "/assets/e092922d4f4e41aa6af343efbbec9d76d019f1c0.svg";
 
 interface EndPageProps {
   onBackClick: () => void;

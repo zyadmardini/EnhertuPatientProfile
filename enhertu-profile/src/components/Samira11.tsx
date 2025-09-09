@@ -1,9 +1,9 @@
 // Image assets from Figma MCP
 // Updated interface to include onEndClick
-const imgVector = "http://localhost:3845/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
-const imgGroup = "http://localhost:3845/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
-const imgVector1 = "http://localhost:3845/assets/0492412761c8509e31e902d4f01c535a5b33ea9d.svg";
-const imgVector2 = "http://localhost:3845/assets/955575a9c724c363258e4b21ead3b46a80bfb6e6.svg";
+const imgVector = "/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
+const imgGroup = "/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
+const imgVector1 = "/assets/0492412761c8509e31e902d4f01c535a5b33ea9d.svg";
+const imgVector2 = "/assets/955575a9c724c363258e4b21ead3b46a80bfb6e6.svg";
 
 interface Samira11Props {
   onBackClick: () => void;

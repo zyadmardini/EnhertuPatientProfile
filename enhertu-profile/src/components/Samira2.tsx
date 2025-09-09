@@ -1,8 +1,8 @@
 // Image assets from Figma MCP
-const imgSamira = "http://localhost:3845/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
-const imgButtonContainer = "http://localhost:3845/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
-const imgIconContainer = "http://localhost:3845/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
-const imgEllipse1 = "http://localhost:3845/assets/b5e1855b59335aea6be52c1e450d97f243cb25a3.svg";
+const imgSamira = "/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
+const imgButtonContainer = "/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
+const imgIconContainer = "/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
+const imgEllipse1 = "/assets/b5e1855b59335aea6be52c1e450d97f243cb25a3.svg";
 
 interface ButtonTreatmentProps {
   text?: string;
@@ -98,7 +98,7 @@ export default function Samira2({ onBackClick, onContinueClick }: Samira2Props) 
         </div>
         
         {/* Treatment background */}
-        <div style={{ position: 'absolute', backgroundColor: '#ec7624', left: '293px', top: '276px', width: '787px', height: '169px' }} data-enter-swipe />
+        <div style={{ position: 'absolute', backgroundColor: '#ec7624', left: '293px', top: '287px', width: '787px', height: '169px' }} data-enter-swipe />
         
         {/* Samira image */}
         <div style={{ 

@@ -24,7 +24,7 @@ export function animateEnter(opts: Opts = {}) {
     scale = 0.98,
     stagger = 0.06,
     ease = 'power2.out',
-    swipeBaseDelay = 0.25,
+    swipeBaseDelay = 0.35,
   } = opts;
 
   const rootEl = ensureElement(root);

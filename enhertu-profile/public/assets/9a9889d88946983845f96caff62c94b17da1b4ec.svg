@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 697 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Button container">
+<path id="Button background" d="M54 0H641.5C672.152 0 697 24.8482 697 55.5V55.5C697 86.1518 672.152 111 641.5 111H54V0Z" fill="var(--fill-0, #250858)"/>
+<ellipse id="Ellipse 2" cx="52" cy="55" rx="52" ry="51" fill="var(--fill-0, white)"/>
+</g>
+</svg>

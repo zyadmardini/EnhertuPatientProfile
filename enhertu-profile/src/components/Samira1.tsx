@@ -1,9 +1,9 @@
 // Image assets from Figma MCP
-const imgSamira = "http://localhost:3845/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
-const imgVector = "http://localhost:3845/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
-const imgGroup = "http://localhost:3845/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
-const imgVector1 = "http://localhost:3845/assets/ea6d40caed0cc5e3efe1b564ac1374474ea0738b.svg";
-const imgVector2 = "http://localhost:3845/assets/341d48a0c7406ac7cf7f218af5a5994c573e0fea.svg";
+const imgSamira = "/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
+const imgVector = "/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
+const imgGroup = "/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
+const imgVector1 = "/assets/ea6d40caed0cc5e3efe1b564ac1374474ea0738b.svg";
+const imgVector2 = "/assets/341d48a0c7406ac7cf7f218af5a5994c573e0fea.svg";
 
 interface Samira1Props {
   onContinueClick: () => void;

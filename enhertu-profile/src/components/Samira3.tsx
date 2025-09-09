@@ -1,8 +1,8 @@
 // Image assets from Figma MCP
-const imgButtonContainer = "http://localhost:3845/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
-const imgIconContainer = "http://localhost:3845/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
-const imgVector = "http://localhost:3845/assets/f74766b67109569552a5a61be5a8cfb9605d8c13.svg";
-const imgVector1 = "http://localhost:3845/assets/0a8f93ce89120f39f92a645ee9cb2f0b34eb570c.svg";
+const imgButtonContainer = "/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
+const imgIconContainer = "/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
+const imgVector = "/assets/f74766b67109569552a5a61be5a8cfb9605d8c13.svg";
+const imgVector1 = "/assets/0a8f93ce89120f39f92a645ee9cb2f0b34eb570c.svg";
 
 interface Samira3Props {
   onBackClick: () => void;

@@ -1,8 +1,8 @@
 // Image assets from Figma MCP
-const imgButtonContainer = "http://localhost:3845/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
-const imgIconContainer = "http://localhost:3845/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
-const imgVector = "http://localhost:3845/assets/aee53a0377d0b242aeb7d3a535bfb57a93635b99.svg";
-const imgVector1 = "http://localhost:3845/assets/96ec5b8ed2fa23d37d3d1e8d9f908f1733bdf681.svg";
+const imgButtonContainer = "/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
+const imgIconContainer = "/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
+const imgVector = "/assets/aee53a0377d0b242aeb7d3a535bfb57a93635b99.svg";
+const imgVector1 = "/assets/96ec5b8ed2fa23d37d3d1e8d9f908f1733bdf681.svg";
 
 interface ButtonTreatmentProps {
   text?: string;
