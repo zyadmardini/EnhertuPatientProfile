@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Image assets from Figma MCP
 const imgRawan = "/assets/6fa207d3bd351023a09e21bd6688c0d60b8b02dd.png";
 const imgImage9 = "/assets/d5e3239e067c7f03922c5fb979b9ff719366010d.png";

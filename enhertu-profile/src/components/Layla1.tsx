@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Image assets from Figma MCP
 const imgLayla = "/assets/79478245b2eb932aea067aead4415c7e229164ad.png";
 const imgVector = "/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
@@ -13,55 +11,6 @@ interface Layla1Props {
   onHomeClick: () => void;
 }
 
-function Group7() {
-  return (
-    <div style={{ 
-      position: 'relative', 
-      width: '123px', 
-      height: '112px',
-      zIndex: 4
-    }}>
-      <div style={{ 
-        position: 'absolute',
-        bottom: '0px',
-        left: '1.03%',
-        right: '7.47%',
-        top: '0px',
-        zIndex: 1
-      }}>
-        <img 
-          alt="" 
-          style={{ 
-            display: 'block', 
-            maxWidth: 'none', 
-            width: '100%', 
-            height: '100%' 
-          }} 
-          src={imgVector} 
-        />
-      </div>
-      <div style={{ 
-        position: 'absolute',
-        bottom: '7.92%',
-        left: '0px',
-        right: '30.68%',
-        top: '7.02%',
-        zIndex: 2
-      }}>
-        <img 
-          alt="" 
-          style={{ 
-            display: 'block', 
-            maxWidth: 'none', 
-            width: '100%', 
-            height: '100%' 
-          }} 
-          src={imgGroup} 
-        />
-      </div>
-    </div>
-  );
-}
 
 export default function Layla1({ onContinueClick, onBackClick, onHomeClick }: Layla1Props) {
   return (

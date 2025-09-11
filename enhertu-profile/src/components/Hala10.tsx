@@ -141,7 +141,6 @@ export default function Hala10({ onContinueClick, onBackClick, onHomeClick }: Ha
       >
         <div 
           style={{ 
-            transform: 'rotate(90deg)',
             width: '346px',
             height: '138px',
             position: 'absolute',
