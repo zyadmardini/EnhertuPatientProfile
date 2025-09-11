@@ -1,1 +1,11 @@
+# Development and IDE files
 .config/
+.cursor/
+.playwright-mcp/
+.superdesign/
+*.metadata.json
+*.progress.json
+builder.config.json
+
+# OS files
+.DS_Store
