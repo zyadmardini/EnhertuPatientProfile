@@ -38,9 +38,10 @@ function ButtonTreatment({ text = "Treatment" }: ButtonTreatmentProps) {
 interface Samira2Props {
   onBackClick: () => void;
   onContinueClick: () => void;
+  onHomeClick: () => void;
 }
 
-export default function Samira2({ onBackClick, onContinueClick }: Samira2Props) {
+export default function Samira2({ onBackClick, onContinueClick, onHomeClick }: Samira2Props) {
   return (
     <div style={{ 
       position: 'relative', 
@@ -73,6 +74,31 @@ export default function Samira2({ onBackClick, onContinueClick }: Samira2Props) 
         onClick={onBackClick}
       >
         ←
+      </div>
+
+      {/* Home Button */}
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          right: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100,
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+        }}
+        onClick={onHomeClick}
+      >
+        ⌂
       </div>
       
       {/* Title */}

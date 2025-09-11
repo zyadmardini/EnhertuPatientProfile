@@ -1,6 +1,5 @@
 ---
-description: Attribute-driven GSAP enter animations for screens
-alwaysApply: true
+alwaysApply: false
 ---
 # GSAP Enter Animations — Attribute-Driven Workflow
 

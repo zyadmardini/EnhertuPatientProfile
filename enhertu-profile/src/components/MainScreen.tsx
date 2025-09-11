@@ -1,8 +1,8 @@
 // Image assets from Figma MCP
 const imgSamira = "/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
-const imgLayla = "/assets/6067c24d639d7f53d8e02f54bb206f202603bae2.png";
-const imgRawan = "/assets/7a436235d6ca2c93df28cc7b436bf16e5f547a89.png";
-const imgRectangle = "/assets/9a1a2ff291c25a4c4d9f1a6afa74db2145c7289f.png";
+const imgLayla = "/assets/79478245b2eb932aea067aead4415c7e229164ad.png";
+const imgRawan = "/assets/6fa207d3bd351023a09e21bd6688c0d60b8b02dd.png";
+const imgRectangle = "/assets/279d457f9489bbcc989c57a4d827b573d21b9ad1.png";
 const imgRectangle3 = "/assets/b1e07bba62b74412085777b8615576fe1675df2b.png";
 const imgRectangle5 = "/assets/739e8ffddd0a204f9d32d1d29746484413531536.png";
 const imgGroup = "/assets/7cea05f9e479e26e68d418e9f103f3ca6341950e.svg";
@@ -17,9 +17,12 @@ const imgRectangle6 = "/assets/b13d17266d13676b59998a7bdacdaa37df6bae5c.svg";
 
 interface MainScreenProps {
   onSamiraClick: () => void;
+  onLaylaClick: () => void;
+  onRawanClick: () => void;
+  onHalaClick: () => void;
 }
 
-export default function MainScreen({ onSamiraClick }: MainScreenProps) {
+export default function MainScreen({ onSamiraClick, onLaylaClick, onRawanClick, onHalaClick }: MainScreenProps) {
   return (
     <div style={{ 
       position: 'relative', 
@@ -184,8 +187,10 @@ export default function MainScreen({ onSamiraClick }: MainScreenProps) {
                 left: '501.074px',
                 top: '0px',
                 width: '447.004px',
-                height: '605.519px'
-              }}>
+                height: '605.519px',
+                cursor: 'pointer'
+              }}
+              onClick={onLaylaClick}>
               <div style={{ 
                 height: '441px', 
                 width: '448px',
@@ -249,8 +254,10 @@ export default function MainScreen({ onSamiraClick }: MainScreenProps) {
                 left: '0px',
                 top: '0px',
                 width: '447.005px',
-                height: '594.986px'
-              }}>
+                height: '594.986px',
+                cursor: 'pointer'
+              }}
+              onClick={onRawanClick}>
               <div style={{ 
                 height: '441px', 
                 width: '448px',
@@ -305,8 +312,10 @@ export default function MainScreen({ onSamiraClick }: MainScreenProps) {
                 left: '526.756px',
                 top: '0px',
                 width: '436.336px',
-                height: '594.986px'
-              }}>
+                height: '594.986px',
+                cursor: 'pointer'
+              }}
+              onClick={onHalaClick}>
               <div style={{ 
                 position: 'relative',
                 height: '439.637px', 

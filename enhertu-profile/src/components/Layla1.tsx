@@ -1,17 +1,69 @@
+import React from 'react';
+
 // Image assets from Figma MCP
-const imgSamira = "/assets/e1a3109de4a4f7b0a552c8c024e8fcfed309a2dd.png";
+const imgLayla = "/assets/79478245b2eb932aea067aead4415c7e229164ad.png";
 const imgVector = "/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
 const imgGroup = "/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
-const imgVector1 = "/assets/ea6d40caed0cc5e3efe1b564ac1374474ea0738b.svg";
-const imgVector2 = "/assets/341d48a0c7406ac7cf7f218af5a5994c573e0fea.svg";
+const imgVector1 = "/assets/556e8b421952909999b8115f6ca26af0a8b00cad.svg";
+const imgVector2 = "/assets/973c03738673ce966a370ad367fdb736a0a89428.svg";
 
-interface Samira1Props {
+interface Layla1Props {
   onContinueClick: () => void;
   onBackClick: () => void;
   onHomeClick: () => void;
 }
 
-export default function Samira1({ onContinueClick, onBackClick, onHomeClick }: Samira1Props) {
+function Group7() {
+  return (
+    <div style={{ 
+      position: 'relative', 
+      width: '123px', 
+      height: '112px',
+      zIndex: 4
+    }}>
+      <div style={{ 
+        position: 'absolute',
+        bottom: '0px',
+        left: '1.03%',
+        right: '7.47%',
+        top: '0px',
+        zIndex: 1
+      }}>
+        <img 
+          alt="" 
+          style={{ 
+            display: 'block', 
+            maxWidth: 'none', 
+            width: '100%', 
+            height: '100%' 
+          }} 
+          src={imgVector} 
+        />
+      </div>
+      <div style={{ 
+        position: 'absolute',
+        bottom: '7.92%',
+        left: '0px',
+        right: '30.68%',
+        top: '7.02%',
+        zIndex: 2
+      }}>
+        <img 
+          alt="" 
+          style={{ 
+            display: 'block', 
+            maxWidth: 'none', 
+            width: '100%', 
+            height: '100%' 
+          }} 
+          src={imgGroup} 
+        />
+      </div>
+    </div>
+  );
+}
+
+export default function Layla1({ onContinueClick, onBackClick, onHomeClick }: Layla1Props) {
   return (
     <div style={{ 
       position: 'relative', 
@@ -114,14 +166,14 @@ export default function Samira1({ onContinueClick, onBackClick, onHomeClick }: S
             <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={imgVector2} />
           </div>
           
-          {/* Samira's Image */}
+          {/* Layla's Image */}
           <div style={{ 
             position: 'absolute',
             height: '391px',
             left: '35.06px',
             top: '145.05px',
             width: '398px',
-            backgroundImage: `url('${imgSamira}')`,
+            backgroundImage: `url('${imgLayla}')`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
             backgroundPosition: 'top left'
@@ -137,8 +189,8 @@ export default function Samira1({ onContinueClick, onBackClick, onHomeClick }: S
           height: '79px',
           width: '416px'
         }}>
-          <p style={{ margin: 0 }}>Samira,</p>
-          <p style={{ margin: 0 }}>71 years old.</p>
+          <p style={{ margin: 0 }}>Layla,</p>
+          <p style={{ margin: 0 }}>68 years old.</p>
         </div>
       </div>
 

@@ -1,0 +1,363 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+---
+alwaysApply: true
+---
+# ENHERTU Patient Profile Screen Implementation Rules
+
+**CRITICAL MEMORY**: This project uses a proven fixed positioning system that works perfectly. DO NOT attempt to "improve" it with responsive design or modern CSS approaches.
+
+## 🎯 **Core Implementation Principles**
+
+### **Fixed Layout System (MANDATORY)**
+- **Dimensions**: Always use `width: '1080px', height: '1920px'`
+- **Positioning**: Use `position: 'absolute'` with exact pixel coordinates
+- **Styling**: Use `style={{}}` inline styles throughout - NO CSS classes
+- **Assets**: Use Figma MCP downloaded assets `
+- **Background Images**: Use `backgroundImage`, `backgroundSize: '100% 100%'`, `backgroundPosition: 'top left'`
+
+### **Figma Positioning Validation (CRITICAL)**
+**ALWAYS validate positioning against Figma metadata to prevent layout issues**
+
+#### **Mandatory Positioning Checks:**
+1. **Get Figma Metadata First**: Call `mcp_Figma_get_metadata` with the node ID before implementing
+2. **Verify Container Positions**: Check that main content containers match Figma coordinates exactly
+3. **Validate Element Hierarchy**: Ensure parent-child positioning relationships are correct
+4. **Cross-Reference Coordinates**: Compare your `left` and `top` values with Figma's `x` and `y` values
+5. **Check Relative Positioning**: For nested elements, verify they're positioned relative to their correct parent container
+
+#### **Common Positioning Mistakes to Avoid:**
+- ❌ **Don't guess coordinates** - always use Figma metadata
+- ❌ **Don't use arbitrary spacing** - use exact Figma measurements
+- ❌ **Don't position elements too far down** - check if content fits in viewport
+- ❌ **Don't ignore container boundaries** - ensure elements fit within their parent containers
+- ❌ **Don't use transforms unnecessarily** - prefer direct positioning when possible
+
+#### **Positioning Validation Workflow:**
+```bash
+# 1. Get Figma design and assets
+mcp_Figma_get_code(nodeId="X:Y", ...)
+
+# 2. Get metadata for positioning validation
+mcp_Figma_get_metadata(nodeId="X:Y", ...)
+
+# 3. Compare coordinates:
+# Figma: x="100" y="200" → React: left: '100px', top: '200px'
+# Figma: width="300" height="150" → React: width: '300px', height: '150px'
+
+# 4. Verify nested positioning:
+# If Figma shows element at x="150" within container at x="100"
+# Then React should use left: '50px' (150-100=50)
+```
+
+### **Z-Index Layering System (CRITICAL)**
+**ALWAYS set explicit z-index values to prevent layering issues**
+
+#### **Standard Z-Index Hierarchy:**
+- **zIndex: 1** - Background containers (light colored boxes, treatment containers)
+- **zIndex: 2** - Header bars and accent elements (colored bars, backgrounds)
+- **zIndex: 3** - Titles and headers (white text on colored backgrounds)
+- **zIndex: 4** - Main images and visual elements (patient photos, icons)
+- **zIndex: 5** - Image overlays and secondary visual elements
+- **zIndex: 6** - Text content and interactive elements (buttons, text blocks)
+- **zIndex: 100** - Navigation buttons (always on top)
+
+### **Navigation Buttons System (MANDATORY)**
+**ALL screens must include Back Button and Home Button for consistent navigation**
+
+#### **Back Button (Top-Left):**
+```tsx
+<div 
+  style={{ 
+    position: 'absolute',
+    top: '50px',
+    left: '50px',
+    width: '60px',
+    height: '60px',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#5b6670',
+    zIndex: 100,
+    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+  }}
+  onClick={onBackClick}
+>
+  ←
+</div>
+```
+
+#### **Home Button (Top-Right):**
+```tsx
+<div 
+  style={{ 
+    position: 'absolute',
+    top: '50px',
+    right: '50px',
+    width: '60px',
+    height: '60px',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    cursor: 'pointer',
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#5b6670',
+    zIndex: 100,
+    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+  }}
+  onClick={onHomeClick}
+>
+  ⌂
+</div>
+```
+
+## 🎬 **GSAP Animation System**
+
+### **Enter Animations (Attribute-Driven)**
+Use lightweight `data-*` attributes to drive enter animations:
+
+- **Single element**: `data-enter`
+- **Group stagger**: `data-enter-group` (container) - direct children will stagger
+- **Ordering**: `data-enter-order="1|2|..."`
+- **Timing**: `data-enter-delay="0.2"`, `data-enter-stagger="0.08"`
+- **Swipe effect**: `data-enter-swipe` (for treatment backgrounds only)
+
+### **Animation Implementation:**
+1. Mark elements in component with attributes
+2. App.tsx automatically calls `animateEnter({ root: nextScreenRef })` after transitions
+3. No custom GSAP code needed per screen
+
+## 🔗 **Screen Navigation & App Integration**
+
+### **Required App.tsx Updates:**
+1. Add screen type to `Screen` union type
+2. Add screen ref to `screenRefs` object
+3. Create screen container with proper ref assignment
+4. Implement screen component with navigation props
+5. Add navigation buttons with proper click handlers
+
+### **Navigation Flow Pattern:**
+- **MainScreen** → `onPatientClick` → **Patient1**
+- **Patient1** → `onContinueClick` → **Patient2** | `onBackClick` → **MainScreen**
+- **Patient2** → `onBackClick` → **Patient1** | `onContinueClick` → **Patient3**
+
+## 📋 **Implementation Checklist**
+
+### **Pre-Implementation Validation:**
+- ✅ Get Figma design code with `mcp_Figma_get_code`
+- ✅ Get Figma metadata with `mcp_Figma_get_metadata` 
+- ✅ Download all required assets to public/assets
+- ✅ Verify all assets are available before coding
+- ✅ Plan positioning strategy based on Figma coordinates
+
+### **Component Structure:**
+- ✅ Fixed dimensions: 1080x1920px
+- ✅ Absolute positioning with exact pixel coordinates from Figma
+- ✅ Inline styles throughout: `style={{ position: 'absolute', left: '35.06px' }}`
+- ✅ Figma MCP image assets (no placeholders)
+- ✅ Explicit z-index values for all overlapping elements
+- ✅ Navigation buttons (Back + Home) on all screens
+- ✅ Proper props interface: `onBackClick` and `onHomeClick`
+
+### **Positioning Validation:**
+- ✅ Main containers positioned exactly as per Figma metadata
+- ✅ Nested elements positioned relative to correct parent containers
+- ✅ Content fits within viewport (no elements positioned too far down)
+- ✅ Scan images, buttons, and text blocks in correct positions
+- ✅ No arbitrary spacing - all measurements from Figma
+
+### **Animation Setup:**
+- ✅ Add `data-enter` / `data-enter-group` attributes to key elements
+- ✅ Use `data-enter-order` for sequencing
+- ✅ Use `data-enter-swipe` for treatment backgrounds only
+- ✅ App.tsx calls `animateEnter({ root: nextScreenRef })` automatically
+
+### **App Integration:**
+- ✅ Add screen to `Screen` union type
+- ✅ Add screen ref to `screenRefs` object
+- ✅ Create screen container with ref assignment
+- ✅ Add navigation logic with proper click handlers
+
+## ❌ **NEVER DO THIS:**
+1. **Don't use responsive design** - the fixed approach works
+2. **Don't use flexbox or modern CSS layouts** - stick to absolute positioning  
+3. **Don't use CSS classes** - use inline styles
+4. **Don't try to "improve" the approach** - the fixed system is proven
+5. **Don't ignore z-index layering** - always set explicit z-index values
+6. **Don't write custom GSAP code** - use the attribute-driven system
+7. **Don't skip navigation buttons** - they're mandatory on all screens
+8. **Don't guess positioning coordinates** - always use Figma metadata
+9. **Don't position elements too far down** - check viewport boundaries
+10. **Don't use arbitrary spacing** - use exact Figma measurements
+11. **Don't ignore container hierarchy** - position relative to correct parent
+
+## 🚨 **Common Positioning Pitfalls & Solutions:**
+
+### **Pitfall 1: Elements Positioned Too Far Down**
+- **Problem**: Content appears below viewport, creating excessive white space
+- **Solution**: Check Figma metadata for correct `y` coordinates, ensure content fits in 1920px height
+- **Example**: If Figma shows `y="913"`, don't use `top: '1213px'`
+
+### **Pitfall 2: Incorrect Container Positioning**
+- **Problem**: Main content containers positioned incorrectly, affecting all child elements
+- **Solution**: Always validate main container positions first, then position children relative to container
+- **Example**: If container is at `x="79"`, child at `x="245"` should use `left: '166px'` (245-79)
+
+### **Pitfall 3: Scan Images Misalignment**
+- **Problem**: Medical scan images not properly aligned or sized
+- **Solution**: Use exact Figma dimensions and positioning for scan containers
+- **Check**: Verify scan images fit within their designated container boundaries
+
+### **Pitfall 4: Button Positioning Issues**
+- **Problem**: Call-to-action buttons positioned incorrectly or too far down
+- **Solution**: Use Figma metadata for button container positioning
+- **Validation**: Ensure buttons are accessible and within reasonable scroll distance
+
+### **Pitfall 5: Text Content Overflow**
+- **Problem**: Text blocks positioned outside their intended containers
+- **Solution**: Check text container dimensions and ensure text fits within bounds
+- **Tip**: Use Figma's text measurements for width and height constraints
+
+## 🎯 **Code Template Pattern:**
+```tsx
+// Image assets from Figma MCP
+const imgPatient = "/assets/patient-image.png";
+const imgBackground = "/assets/background.svg";
+
+interface PatientScreenProps {
+  onContinueClick: () => void;
+  onBackClick: () => void;
+  onHomeClick: () => void;
+}
+
+export default function PatientScreen({ onContinueClick, onBackClick, onHomeClick }: PatientScreenProps) {
+  return (
+    <div style={{ 
+      position: 'relative', 
+      width: '1080px', 
+      height: '1920px', 
+      backgroundColor: '#color'
+    }}>
+      {/* Navigation Buttons */}
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          left: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100,
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+        }}
+        onClick={onBackClick}
+      >
+        ←
+      </div>
+
+      <div 
+        style={{ 
+          position: 'absolute',
+          top: '50px',
+          right: '50px',
+          width: '60px',
+          height: '60px',
+          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          cursor: 'pointer',
+          fontSize: '24px',
+          fontWeight: 'bold',
+          color: '#5b6670',
+          zIndex: 100,
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+        }}
+        onClick={onHomeClick}
+      >
+        ⌂
+      </div>
+
+      {/* Content with animations */}
+      <div data-enter-group data-enter-order="1" style={{ 
+        position: 'absolute', 
+        left: '35.06px', 
+        top: '145.05px',
+        zIndex: 4
+      }}>
+        {/* Replace with Figma assets */}
+      </div>
+    </div>
+  );
+}
+```
+
+## �� **Critical Success Factors:**
+- ✅ **Copy MainScreen.tsx structure exactly** - it's the proven template
+- ✅ **Use Figma MCP assets** - no placeholders or external imports
+- ✅ **Set explicit z-index values** - prevents layering issues
+- ✅ **Include navigation buttons** - mandatory on all screens
+- ✅ **Use attribute-driven animations** - no custom GSAP code needed
+- ✅ **Follow the exact positioning system** - don't try to improve it
+
+## 🔍 **Positioning Validation Workflow:**
+
+### **Step 1: Get Figma Data**
+```bash
+# Get design and assets
+mcp_Figma_get_code(nodeId="X:Y", dirForAssetWrites="...", ...)
+
+# Get positioning metadata
+mcp_Figma_get_metadata(nodeId="X:Y", ...)
+```
+
+### **Step 2: Validate Key Elements**
+- **Main Container**: Check `x`, `y`, `width`, `height` match your React positioning
+- **Content Sections**: Verify treatment containers, scan sections, button areas
+- **Nested Elements**: Ensure child elements are positioned relative to correct parents
+- **Viewport Boundaries**: Confirm all content fits within 1080x1920px
+
+### **Step 3: Cross-Reference Coordinates**
+```bash
+# Example validation:
+# Figma Frame: x="79" y="913" width="930" height="814"
+# React: left: '79px', top: '913px', width: '930px', height: '814px'
+
+# Figma Child: x="245" within parent x="79" 
+# React: left: '166px' (245-79=166)
+```
+
+### **Step 4: Test Critical Elements**
+- ✅ Navigation buttons visible and clickable
+- ✅ Main content fits in viewport
+- ✅ Scan images properly aligned
+- ✅ Buttons accessible without excessive scrolling
+- ✅ Text content readable and properly positioned
+
+**GOLDEN RULE**: MainScreen.tsx and existing Samira screens are the gold standard - copy their approach exactly for all new patient profiles!
+
+**CRITICAL REMINDER**: Always validate positioning against Figma metadata before considering implementation complete!
+
+no need to run npm or build, usually its app is already running
+
+**Make sure in pages with rows like rawan3.tsx, the shorter rectangles on the left are above the longer rectangles on the righr
