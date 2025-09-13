@@ -1,7 +1,8 @@
 // Image assets from Figma MCP
 const imgGroup17 = "/assets/97f35f9af3b928a4a96696e091e16468cbaf024b.png";
 const imgGroup18 = "/assets/3195a242dac5b0204e112d9108269adb0ce1dabf.png";
-const imgButtonContainer = "/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
+const imgButtonContainer =
+  "/assets/9a9889d88946983845f96caff62c94b17da1b4ec.svg";
 const imgIconContainer = "/assets/4711e851a8fe2654d4c23f643fa771dc6e934758.svg";
 const imgVector = "/assets/f74766b67109569552a5a61be5a8cfb9605d8c13.svg";
 const imgVector1 = "/assets/0a8f93ce89120f39f92a645ee9cb2f0b34eb570c.svg";
@@ -12,392 +13,435 @@ interface Layla3Props {
   onHomeClick: () => void;
 }
 
-export default function Layla3({ onContinueClick, onBackClick, onHomeClick }: Layla3Props) {
+export default function Layla3({
+  onContinueClick,
+  onBackClick,
+  onHomeClick,
+}: Layla3Props) {
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '1080px', 
-      height: '1920px', 
-      backgroundColor: 'white'
-    }}>
+    <div
+      style={{
+        position: "relative",
+        width: "1080px",
+        height: "1920px",
+        backgroundColor: "white",
+      }}
+      data-oid="3:y32b3"
+    >
       {/* Navigation Buttons */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          left: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onBackClick}
+        data-oid="t8wus4b"
       >
         ←
       </div>
 
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          right: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onHomeClick}
+        data-oid="8ro:sv1"
       >
         ⌂
       </div>
 
       {/* Header background */}
-      <div 
+      <div
         data-enter
-        style={{ 
-          position: 'absolute',
-          left: '0px',
-          top: '0px',
-          width: '756px',
-          height: '27px',
-          background: 'linear-gradient(to right, #ec7624, #ffb061)',
-          zIndex: 2
+        style={{
+          position: "absolute",
+          left: "0px",
+          top: "0px",
+          width: "756px",
+          height: "27px",
+          background: "linear-gradient(to right, #ec7624, #ffb061)",
+          zIndex: 2,
         }}
+        data-oid="gc:60r4"
       />
 
       {/* Main content container */}
-      <div 
+      <div
         data-enter-group
         data-enter-order="1"
-        style={{ 
-          position: 'absolute',
-          left: '35px',
-          top: '180px',
-          width: '1009px',
-          height: '1560px',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "35px",
+          top: "180px",
+          width: "1009px",
+          height: "1560px",
+          zIndex: 1,
         }}
+        data-oid="69eiaof"
       >
         {/* Content frame */}
-        <div 
+        <div
           data-enter-group
           data-enter-order="2"
-          style={{ 
-            position: 'absolute',
-            left: '36px',
-            top: '0px',
-            width: '937px',
-            height: '1315px',
-            zIndex: 1
+          style={{
+            position: "absolute",
+            left: "36px",
+            top: "0px",
+            width: "937px",
+            height: "1315px",
+            zIndex: 1,
           }}
+          data-oid="7werldg"
         >
           {/* Title */}
-          <div 
+          <div
             data-enter
             data-enter-order="1"
-            style={{ 
-              position: 'absolute',
-              left: '0px',
-              top: '0px',
-              width: '937px',
-              height: '80px',
-              fontSize: '50px',
-              fontWeight: 'bold',
-              color: '#5b6670',
-              display: 'flex',
-              alignItems: 'center',
-              zIndex: 6
+            style={{
+              position: "absolute",
+              left: "0px",
+              top: "0px",
+              width: "937px",
+              height: "80px",
+              fontSize: "50px",
+              fontWeight: "bold",
+              color: "#5b6670",
+              display: "flex",
+              alignItems: "center",
+              zIndex: 6,
             }}
+            data-oid="utk7xjj"
           >
             Case Study: Layla
           </div>
 
           {/* Main content frame */}
-          <div 
+          <div
             data-enter-group
             data-enter-order="3"
-            style={{ 
-              position: 'absolute',
-              left: '0px',
-              top: '109px',
-              width: '937px',
-              height: '631px',
-              zIndex: 1
+            style={{
+              position: "absolute",
+              left: "0px",
+              top: "109px",
+              width: "937px",
+              height: "631px",
+              zIndex: 1,
             }}
+            data-oid="dp672e1"
           >
             {/* Treatment background */}
-            <div 
+            <div
               data-enter-swipe
-              style={{ 
-                position: 'absolute',
-                left: '174px',
-                top: '0px',
-                width: '762px',
-                height: '169px',
-                backgroundColor: '#c5d752',
-                zIndex: 2
+              style={{
+                position: "absolute",
+                left: "174px",
+                top: "0px",
+                width: "762px",
+                height: "169px",
+                backgroundColor: "#c5d752",
+                zIndex: 2,
               }}
+              data-oid="i1ir:dd"
             />
 
             {/* Vector decoration */}
-            <div 
+            <div
               data-enter
               data-enter-order="1"
-              style={{ 
-                position: 'absolute',
-                left: '0px',
-                top: '0px',
-                width: '366px',
-                height: '366px',
-                zIndex: 4
+              style={{
+                position: "absolute",
+                left: "0px",
+                top: "0px",
+                width: "366px",
+                height: "366px",
+                zIndex: 4,
               }}
+              data-oid="07f5:y9"
             >
-              <img 
-                src={imgVector} 
-                alt="" 
-                style={{ 
-                  width: '100%', 
-                  height: '100%',
-                  objectFit: 'contain'
+              <img
+                src={imgVector}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
                 }}
+                data-oid="jnu364u"
               />
             </div>
 
             {/* Treatment title */}
-            <div 
+            <div
               data-enter
               data-enter-order="2"
-              style={{ 
-                position: 'absolute',
-                left: '411px',
-                top: '54px',
-                width: '314px',
-                height: '62px',
-                fontSize: '51px',
-                fontWeight: 'bold',
-                color: 'white',
-                display: 'flex',
-                alignItems: 'center',
-                zIndex: 3
+              style={{
+                position: "absolute",
+                left: "411px",
+                top: "54px",
+                width: "314px",
+                height: "62px",
+                fontSize: "51px",
+                fontWeight: "bold",
+                color: "white",
+                display: "flex",
+                alignItems: "center",
+                zIndex: 3,
               }}
+              data-oid="03d3z3j"
             >
               1L treatment
             </div>
 
-  
-
             {/* Vector decoration 2 */}
-            <div 
+            <div
               data-enter
               data-enter-order="4"
-              style={{ 
-                position: 'absolute',
-                left: '129.76px',
-                top: '100.65px',
-                width: '128.1px',
-                height: '187.77px',
-                zIndex: 4
+              style={{
+                position: "absolute",
+                left: "129.76px",
+                top: "100.65px",
+                width: "128.1px",
+                height: "187.77px",
+                zIndex: 4,
               }}
+              data-oid="6uo_ens"
             >
-              <img 
-                src={imgVector1} 
-                alt="" 
-                style={{ 
-                  width: '100%', 
-                  height: '100%',
-                  objectFit: 'contain'
+              <img
+                src={imgVector1}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
                 }}
+                data-oid="cba3ayy"
               />
             </div>
 
             {/* Treatment container */}
-            <div 
+            <div
               data-enter-swipe
-              style={{ 
-                position: 'absolute',
-                left: '0px',
-                top: '103px',
-                width: '937px',
-                height: '528px',
-                backgroundColor: '#f3f7d9',
-                borderTopLeftRadius: '93px',
-                zIndex: 1
+              style={{
+                position: "absolute",
+                left: "0px",
+                top: "103px",
+                width: "937px",
+                height: "528px",
+                backgroundColor: "#f3f7d9",
+                borderTopLeftRadius: "93px",
+                zIndex: 1,
               }}
+              data-oid="l8_cyll"
             />
 
             {/* Treatment details */}
-            <div 
+            <div
               data-enter
               data-enter-order="5"
-              style={{ 
-                position: 'absolute',
-                left: '6px',
-                top: '388px',
-                width: '901px',
-                height: '243px',
-                fontSize: '31px',
-                fontWeight: 'bold',
-                color: 'black',
-                zIndex: 6
+              style={{
+                position: "absolute",
+                left: "6px",
+                top: "388px",
+                width: "901px",
+                height: "243px",
+                fontSize: "31px",
+                fontWeight: "bold",
+                color: "black",
+                zIndex: 6,
               }}
+              data-oid="jdpb1-r"
             >
-              <ul style={{ margin: 0, paddingLeft: '46.5px' }}>
-                <li style={{ marginBottom: '0px' }}>
-                  <span style={{ lineHeight: '54px' }}>Paclitaxel was given for six cycles </span>
+              <ul
+                style={{ margin: 0, paddingLeft: "46.5px" }}
+                data-oid="o2t-ff4"
+              >
+                <li style={{ marginBottom: "0px" }} data-oid="18pyqfj">
+                  <span style={{ lineHeight: "54px" }} data-oid="d9wjv8k">
+                    Paclitaxel was given for six cycles{" "}
+                  </span>
                 </li>
-                <li style={{ marginBottom: '0px' }}>
-                  <span style={{ lineHeight: '54px' }}>Trastuzumab + pertuzumab was given as maintenance therapy until February 2022</span>
+                <li style={{ marginBottom: "0px" }} data-oid="985s052">
+                  <span style={{ lineHeight: "54px" }} data-oid="dgyft81">
+                    Trastuzumab + pertuzumab was given as maintenance therapy
+                    until February 2022
+                  </span>
                 </li>
-                <li>
-                  <span style={{ lineHeight: '54px' }}>There was a complete response in the breast and lung</span>
+                <li data-oid="6y:7y8v">
+                  <span style={{ lineHeight: "54px" }} data-oid="2urxhjq">
+                    There was a complete response in the breast and lung
+                  </span>
                 </li>
               </ul>
             </div>
 
             {/* Patient treatment info */}
-            <div 
+            <div
               data-enter
               data-enter-order="6"
-              style={{ 
-                position: 'absolute',
-                left: '366px',
-                top: '191px',
-                width: '523px',
-                height: '175px',
-                fontSize: '31px',
-                fontWeight: 'bold',
-                color: 'black',
-                zIndex: 6
+              style={{
+                position: "absolute",
+                left: "366px",
+                top: "191px",
+                width: "523px",
+                height: "175px",
+                fontSize: "31px",
+                fontWeight: "bold",
+                color: "black",
+                zIndex: 6,
               }}
+              data-oid="fildnv:"
             >
-              <ul style={{ margin: 0, paddingLeft: '46.5px' }}>
-                <li>
-                  <span style={{ lineHeight: '54px' }}>Patient started paclitaxel + trastuzumab + pertuzumab treatment in October 2018 </span>
+              <ul
+                style={{ margin: 0, paddingLeft: "46.5px" }}
+                data-oid="72q_2u8"
+              >
+                <li data-oid=":8eoaug">
+                  <span style={{ lineHeight: "54px" }} data-oid=".5zxu3h">
+                    Patient started paclitaxel + trastuzumab + pertuzumab
+                    treatment in October 2018{" "}
+                  </span>
                 </li>
               </ul>
             </div>
           </div>
 
           {/* Scans description */}
-          <div 
+          <div
             data-enter
             data-enter-order="4"
-            style={{ 
-              position: 'absolute',
-              left: '3.5px',
-              top: '773px',
-              width: '930px',
-              height: '40px',
-              fontSize: '28px',
-              fontWeight: 'bold',
-              color: '#5d6771',
-              display: 'flex',
-              alignItems: 'center',
-              zIndex: 6
+            style={{
+              position: "absolute",
+              left: "3.5px",
+              top: "773px",
+              width: "930px",
+              height: "40px",
+              fontSize: "28px",
+              fontWeight: "bold",
+              color: "#5d6771",
+              display: "flex",
+              alignItems: "center",
+              zIndex: 6,
             }}
+            data-oid="dyyzdd_"
           >
             Scans showing breast tumor and skin thickness:
           </div>
 
           {/* Scans container */}
-          <div 
+          <div
             data-enter-group
             data-enter-order="5"
-            style={{ 
-              position: 'absolute',
-              left: '0px',
-              top: '853px',
-              width: '937px',
-              height: '462px',
-              zIndex: 1
+            style={{
+              position: "absolute",
+              left: "0px",
+              top: "853px",
+              width: "937px",
+              height: "462px",
+              zIndex: 1,
             }}
+            data-oid="4r_rffp"
           >
             {/* Scans frame */}
-            <div 
+            <div
               data-enter-group
               data-enter-order="1"
-              style={{ 
-                position: 'absolute',
-                left: '3.5px',
-                top: '0px',
-                width: '930px',
-                height: '389px',
-                zIndex: 1
+              style={{
+                position: "absolute",
+                left: "3.5px",
+                top: "0px",
+                width: "930px",
+                height: "389px",
+                zIndex: 1,
               }}
+              data-oid="4z77r8s"
             >
               {/* Scan 1 */}
-              <div 
+              <div
                 data-enter
                 data-enter-order="1"
-                style={{ 
-                  position: 'absolute',
-                  left: '3.5px',
-                  top: '34px',
-                  width: '423px',
-                  height: '355px',
+                style={{
+                  position: "absolute",
+                  left: "3.5px",
+                  top: "34px",
+                  width: "423px",
+                  height: "355px",
                   backgroundImage: `url('${imgGroup17}')`,
-                  backgroundSize: '100% 100%',
-                  backgroundPosition: 'top left',
-                  backgroundRepeat: 'no-repeat',
-                  zIndex: 4
+                  backgroundSize: "100% 100%",
+                  backgroundPosition: "top left",
+                  backgroundRepeat: "no-repeat",
+                  zIndex: 4,
                 }}
+                data-oid="sivfjet"
               />
 
               {/* Scan 2 */}
-              <div 
+              <div
                 data-enter
                 data-enter-order="2"
-                style={{ 
-                  position: 'absolute',
-                  left: '503.5px',
-                  top: '0px',
-                  width: '423px',
-                  height: '389px',
+                style={{
+                  position: "absolute",
+                  left: "503.5px",
+                  top: "0px",
+                  width: "423px",
+                  height: "389px",
                   backgroundImage: `url('${imgGroup18}')`,
-                  backgroundSize: '100% 100%',
-                  backgroundPosition: 'top left',
-                  backgroundRepeat: 'no-repeat',
-                  zIndex: 4
+                  backgroundSize: "100% 100%",
+                  backgroundPosition: "top left",
+                  backgroundRepeat: "no-repeat",
+                  zIndex: 4,
                 }}
+                data-oid="2dln34."
               />
             </div>
 
             {/* Scan caption */}
-            <div 
+            <div
               data-enter
               data-enter-order="2"
-              style={{ 
-                position: 'absolute',
-                left: '3.5px',
-                top: '422px',
-                width: '930px',
-                height: '40px',
-                fontSize: '28px',
-                fontStyle: 'italic',
-                color: '#5d6771',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                zIndex: 6
+              style={{
+                position: "absolute",
+                left: "3.5px",
+                top: "422px",
+                width: "930px",
+                height: "40px",
+                fontSize: "28px",
+                fontStyle: "italic",
+                color: "#5d6771",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                zIndex: 6,
               }}
+              data-oid="xq.77mh"
             >
               (Scans taken October 2018)
             </div>
@@ -405,78 +449,84 @@ export default function Layla3({ onContinueClick, onBackClick, onHomeClick }: La
         </div>
 
         {/* Continue button */}
-        <div 
+        <div
           data-enter
           data-enter-order="6"
-          style={{ 
-            position: 'absolute',
-            left: '155px',
-            top: '1448px',
-            width: '699px',
-            height: '112px',
-            zIndex: 6
+          style={{
+            position: "absolute",
+            left: "155px",
+            top: "1448px",
+            width: "699px",
+            height: "112px",
+            zIndex: 6,
           }}
           onClick={onContinueClick}
+          data-oid="14.qlhz"
         >
           {/* Button container */}
-          <div 
-            style={{ 
-              position: 'absolute',
-              bottom: '0px',
-              left: '0.29%',
-              right: '0px',
-              top: '0.89%',
-              zIndex: 1
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: "0.29%",
+              right: "0px",
+              top: "0.89%",
+              zIndex: 1,
             }}
+            data-oid="4236u19"
           >
-            <img 
-              src={imgButtonContainer} 
-              alt="" 
-              style={{ 
-                width: '100%', 
-                height: '100%',
-                objectFit: 'contain'
+            <img
+              src={imgButtonContainer}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
               }}
+              data-oid="hwcevc3"
             />
           </div>
 
           {/* Icon container */}
-          <div 
-            style={{ 
-              position: 'absolute',
-              bottom: '0px',
-              left: '0px',
-              right: '82.4%',
-              top: '0px',
-              zIndex: 2
+          <div
+            style={{
+              position: "absolute",
+              bottom: "0px",
+              left: "0px",
+              right: "82.4%",
+              top: "0px",
+              zIndex: 2,
             }}
+            data-oid="w8.p1dk"
           >
-            <img 
-              src={imgIconContainer} 
-              alt="" 
-              style={{ 
-                width: '100%', 
-                height: '100%',
-                objectFit: 'contain'
+            <img
+              src={imgIconContainer}
+              alt=""
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
               }}
+              data-oid="06qoppg"
             />
           </div>
 
           {/* Button text */}
-          <div 
-            style={{ 
-              position: 'absolute',
-              inset: '28.57% 4.15% 28.57% 17.6%',
-              fontSize: '31px',
-              fontWeight: 'bold',
-              color: 'white',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              textAlign: 'center',
-              cursor: 'pointer',
-              zIndex: 6
+          <div
+            style={{
+              position: "absolute",
+              inset: "28.57% 4.15% 28.57% 17.6%",
+              fontSize: "31px",
+              fontWeight: "bold",
+              color: "white",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              cursor: "pointer",
+              zIndex: 6,
             }}
+            data-oid="u.e7f6v"
           >
             Progression
           </div>

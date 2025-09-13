@@ -11,333 +11,521 @@ interface Samira6Props {
   onInternationalGuidanceClick: () => void;
 }
 
-export default function Samira6({ onBackClick, onHomeClick, onInternationalGuidanceClick }: Samira6Props) {
+export default function Samira6({
+  onBackClick,
+  onHomeClick,
+  onInternationalGuidanceClick,
+}: Samira6Props) {
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '1080px', 
-      height: '1920px', 
-      backgroundColor: 'white' 
-    }}>
+    <div
+      style={{
+        position: "relative",
+        width: "1080px",
+        height: "1920px",
+        backgroundColor: "white",
+      }}
+      data-oid="okuv-7o"
+    >
       {/* Background */}
-      <div style={{ position: 'absolute', backgroundColor: 'white', inset: 0, zIndex: 1 }} />
-      
+      <div
+        style={{
+          position: "absolute",
+          backgroundColor: "white",
+          inset: 0,
+          zIndex: 1,
+        }}
+        data-oid="bnz9f4v"
+      />
+
       {/* Header background */}
-      <div style={{ 
-        position: 'absolute', 
-        backgroundImage: 'linear-gradient(to right, #ec7624, #ffb061)', 
-        height: '27px', 
-        left: 0, 
-        top: 0, 
-        width: '756px',
-        zIndex: 2
-      }} />
-      
+      <div
+        style={{
+          position: "absolute",
+          backgroundImage: "linear-gradient(to right, #ec7624, #ffb061)",
+          height: "27px",
+          left: 0,
+          top: 0,
+          width: "756px",
+          zIndex: 2,
+        }}
+        data-oid="253kie3"
+      />
+
       {/* Back Button */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          left: '50px',
-          width: '60px',
-          height: '60px',
-          borderRadius: '50%',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "50px",
+          width: "60px",
+          height: "60px",
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onBackClick}
+        data-oid="fh9im8h"
       >
         ←
       </div>
-      
+
       {/* Home Button */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          right: '50px',
-          width: '60px',
-          height: '60px',
-          borderRadius: '50%',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "50px",
+          width: "60px",
+          height: "60px",
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onHomeClick}
+        data-oid="sqe1d1c"
       >
         ⌂
       </div>
-      
+
       {/* Main Title */}
-      <div style={{ 
-        position: 'absolute', 
-        fontFamily: 'Inter, sans-serif', 
-        fontWeight: 'bold', 
-        height: '182px', 
-        lineHeight: 'normal', 
-        fontStyle: 'normal', 
-        color: '#250858', 
-        fontSize: '36px', 
-        top: '74px', 
-        width: '844px', 
-        left: 'calc(50% - 421px)',
-        zIndex: 3
-      }} data-enter>
-        <p style={{ margin: 0, lineHeight: 'normal', whiteSpace: 'pre-wrap' }}>
-          In DESTINY-Breast03, ENHERTU delivered improved survival vs T-DM1 in 2L HER2-positive mBC1,2
+      <div
+        style={{
+          position: "absolute",
+          fontFamily: "Inter, sans-serif",
+          fontWeight: "bold",
+          height: "182px",
+          lineHeight: "normal",
+          fontStyle: "normal",
+          color: "#250858",
+          fontSize: "36px",
+          top: "74px",
+          width: "844px",
+          left: "calc(50% - 421px)",
+          zIndex: 3,
+        }}
+        data-enter
+        data-oid="hgr7.n-"
+      >
+        <p
+          style={{ margin: 0, lineHeight: "normal", whiteSpace: "pre-wrap" }}
+          data-oid="qrmr5qw"
+        >
+          In DESTINY-Breast03, ENHERTU delivered improved survival vs T-DM1 in
+          2L HER2-positive mBC1,2
         </p>
       </div>
-      
+
       {/* Updated analyses header */}
-      <div style={{ 
-        position: 'absolute', 
-        left: '118px', 
-        top: '220px',
-        zIndex: 2
-      }} data-enter-group data-enter-order="2">
-        <div style={{ 
-          position: 'absolute', 
-          height: '92.399px', 
-          left: '0px', 
-          top: '0px', 
-          width: '332px',
-          zIndex: 22
-        }}>
-          <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={imgVector} />
+      <div
+        style={{
+          position: "absolute",
+          left: "118px",
+          top: "220px",
+          zIndex: 2,
+        }}
+        data-enter-group
+        data-enter-order="2"
+        data-oid="pru-y.9"
+      >
+        <div
+          style={{
+            position: "absolute",
+            height: "92.399px",
+            left: "0px",
+            top: "0px",
+            width: "332px",
+            zIndex: 22,
+          }}
+          data-oid="-2.sn7g"
+        >
+          <img
+            alt=""
+            style={{
+              display: "block",
+              maxWidth: "none",
+              width: "100%",
+              height: "100%",
+            }}
+            src={imgVector}
+            data-oid="rc.z4hc"
+          />
         </div>
-        
-        <div style={{ 
-          position: 'absolute', 
-          fontFamily: 'Inter, sans-serif', 
-          fontWeight: 'bold', 
-          height: '59px', 
-          lineHeight: 'normal', 
-          left: '33px', 
-          fontStyle: 'normal', 
-          fontSize: '25px', 
-          color: 'white', 
-          top: '12px', 
-          width: '309px',
-          zIndex: 22
-        }}>
-          <p style={{ margin: 0 }}>Updated analyses</p>
-          <p style={{ margin: 0 }}>(July 2022)</p>
+
+        <div
+          style={{
+            position: "absolute",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "bold",
+            height: "59px",
+            lineHeight: "normal",
+            left: "33px",
+            fontStyle: "normal",
+            fontSize: "25px",
+            color: "white",
+            top: "12px",
+            width: "309px",
+            zIndex: 22,
+          }}
+          data-oid="k_ldz:z"
+        >
+          <p style={{ margin: 0 }} data-oid="pj35plb">
+            Updated analyses
+          </p>
+          <p style={{ margin: 0 }} data-oid="u1l6gna">
+            (July 2022)
+          </p>
         </div>
       </div>
-      
+
       {/* First Graph */}
-      <div style={{ 
-        position: 'absolute', 
-        backgroundImage: `url('${imgGraph1}')`, 
-        backgroundSize: '100% 100%', 
-        backgroundPosition: 'top left', 
-        height: '435px', 
-        left: '78px', 
-        top: '325px', 
-        width: '868px',
-        zIndex: 4
-      }} data-enter-group data-enter-order="3" />
-      
+      <div
+        style={{
+          position: "absolute",
+          backgroundImage: `url('${imgGraph1}')`,
+          backgroundSize: "100% 100%",
+          backgroundPosition: "top left",
+          height: "435px",
+          left: "78px",
+          top: "325px",
+          width: "868px",
+          zIndex: 4,
+        }}
+        data-enter-group
+        data-enter-order="3"
+        data-oid="h.lnnd0"
+      />
+
       {/* Consistent PFS container */}
-      <div style={{ 
-        position: 'absolute', 
-        left: '74px', 
-        top: '773px',
-        zIndex: 1
-      }} data-enter-group data-enter-order="4">
-        <div style={{ 
-          position: 'absolute', 
-          backgroundColor: '#f3f7d9', 
-          height: '152px', 
-          left: '0px', 
-          top: '0px', 
-          width: '935px',
-          zIndex: 1
-        }} />
-        <div style={{ 
-          position: 'absolute', 
-          backgroundColor: '#c0d72f', 
-          height: '9px', 
-          left: '0px', 
-          top: '0px', 
-          width: '935px',
-          zIndex: 2
-        }} />
-        
-        <div style={{ 
-          position: 'absolute', 
-          fontFamily: 'Inter, sans-serif', 
-          fontWeight: 'normal', 
-          lineHeight: '0', 
-          left: '466.5px', 
-          fontStyle: 'normal', 
-          color: '#5d6771', 
-          fontSize: '25px', 
-          textAlign: 'center', 
-          top: '28px', 
-          transform: 'translateX(-50%)', 
-          width: '935px',
-          zIndex: 3
-        }}>
-          <p style={{ margin: 0, lineHeight: '28px', whiteSpace: 'pre-wrap' }}>
-            <span style={{ fontWeight: 'bold' }}>In the updated analysis (July 2022), consistent PFS was observed in all subgroups tested with ENHERTU,</span>
-            <span> including patients with stable brain metastases at baseline, patients with baseline visceral disease, and patients with prior pertuzumab treatment1</span>
+      <div
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "773px",
+          zIndex: 1,
+        }}
+        data-enter-group
+        data-enter-order="4"
+        data-oid="fe5-srx"
+      >
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "#f3f7d9",
+            height: "152px",
+            left: "0px",
+            top: "0px",
+            width: "935px",
+            zIndex: 1,
+          }}
+          data-oid="rup_58v"
+        />
+
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "#c0d72f",
+            height: "9px",
+            left: "0px",
+            top: "0px",
+            width: "935px",
+            zIndex: 2,
+          }}
+          data-oid="6kba.yc"
+        />
+
+        <div
+          style={{
+            position: "absolute",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "normal",
+            lineHeight: "0",
+            left: "466.5px",
+            fontStyle: "normal",
+            color: "#5d6771",
+            fontSize: "25px",
+            textAlign: "center",
+            top: "28px",
+            transform: "translateX(-50%)",
+            width: "935px",
+            zIndex: 3,
+          }}
+          data-oid="2ldoiou"
+        >
+          <p
+            style={{ margin: 0, lineHeight: "28px", whiteSpace: "pre-wrap" }}
+            data-oid="k57kg-k"
+          >
+            <span style={{ fontWeight: "bold" }} data-oid="1hy_sb9">
+              In the updated analysis (July 2022), consistent PFS was observed
+              in all subgroups tested with ENHERTU,
+            </span>
+            <span data-oid="q9opnpl">
+              {" "}
+              including patients with stable brain metastases at baseline,
+              patients with baseline visceral disease, and patients with prior
+              pertuzumab treatment1
+            </span>
           </p>
         </div>
       </div>
-      
+
       {/* Second Graph */}
-      <div style={{ 
-        position: 'absolute', 
-        backgroundImage: `url('${imgGroup13}')`, 
-        backgroundSize: '100% 100%', 
-        backgroundPosition: 'top left', 
-        height: '483px', 
-        left: '71px', 
-        top: '942px', 
-        width: '868px',
-        zIndex: 4
-      }} data-enter-group data-enter-order="5" />
-      
+      <div
+        style={{
+          position: "absolute",
+          backgroundImage: `url('${imgGroup13}')`,
+          backgroundSize: "100% 100%",
+          backgroundPosition: "top left",
+          height: "483px",
+          left: "71px",
+          top: "942px",
+          width: "868px",
+          zIndex: 4,
+        }}
+        data-enter-group
+        data-enter-order="5"
+        data-oid="gax0k80"
+      />
+
       {/* Updated analysis container */}
-      <div style={{ 
-        position: 'absolute', 
-        left: '74px', 
-        top: '1444px',
-        zIndex: 1
-      }} data-enter-group data-enter-order="6">
-        <div style={{ 
-          position: 'absolute', 
-          backgroundColor: '#f3f7d9', 
-          height: '133px', 
-          left: '0px', 
-          top: '0px', 
-          width: '935px',
-          zIndex: 1
-        }} />
-        <div style={{ 
-          position: 'absolute', 
-          backgroundColor: '#c0d72f', 
-          height: '7.875px', 
-          left: '0px', 
-          top: '0px', 
-          width: '935px',
-          zIndex: 2
-        }} />
-        
-        <div style={{ 
-          position: 'absolute', 
-          fontFamily: 'Inter, sans-serif', 
-          fontWeight: 'normal', 
-          lineHeight: '0', 
-          left: '466.5px', 
-          fontStyle: 'normal', 
-          color: '#5d6771', 
-          fontSize: '25px', 
-          textAlign: 'center', 
-          top: '28px', 
-          transform: 'translateX(-50%)', 
-          width: '935px',
-          zIndex: 3
-        }}>
-          <p style={{ margin: 0, lineHeight: '28px', whiteSpace: 'pre-wrap' }}>
-            <span style={{ fontWeight: 'bold' }}>ENHERTU reduced the risk of death by 36% vs T-DM1 (HR: 0.64; 95% CI: 0.47, 0.87; P=0.0037</span>
-            <span>) In the updated analysis, mOS was not reached in either study arm NR (40.5–NE) vs NR (34.0–NE); ENHERTU vs T-DM1 respectively1</span>
+      <div
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "1444px",
+          zIndex: 1,
+        }}
+        data-enter-group
+        data-enter-order="6"
+        data-oid="74uw4m-"
+      >
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "#f3f7d9",
+            height: "133px",
+            left: "0px",
+            top: "0px",
+            width: "935px",
+            zIndex: 1,
+          }}
+          data-oid="8i1..1."
+        />
+
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "#c0d72f",
+            height: "7.875px",
+            left: "0px",
+            top: "0px",
+            width: "935px",
+            zIndex: 2,
+          }}
+          data-oid="7c6vcac"
+        />
+
+        <div
+          style={{
+            position: "absolute",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "normal",
+            lineHeight: "0",
+            left: "466.5px",
+            fontStyle: "normal",
+            color: "#5d6771",
+            fontSize: "25px",
+            textAlign: "center",
+            top: "28px",
+            transform: "translateX(-50%)",
+            width: "935px",
+            zIndex: 3,
+          }}
+          data-oid="qbnqdbj"
+        >
+          <p
+            style={{ margin: 0, lineHeight: "28px", whiteSpace: "pre-wrap" }}
+            data-oid="317efty"
+          >
+            <span style={{ fontWeight: "bold" }} data-oid="bhcykva">
+              ENHERTU reduced the risk of death by 36% vs T-DM1 (HR: 0.64; 95%
+              CI: 0.47, 0.87; P=0.0037
+            </span>
+            <span data-oid="kxjc-f6">
+              ) In the updated analysis, mOS was not reached in either study arm
+              NR (40.5–NE) vs NR (34.0–NE); ENHERTU vs T-DM1 respectively1
+            </span>
           </p>
         </div>
       </div>
-      
+
       {/* Initial analysis note */}
-      <div style={{ 
-        position: 'absolute', 
-        fontFamily: 'Inter, sans-serif', 
-        fontWeight: 'light', 
-        lineHeight: '28px', 
-        left: '74px', 
-        fontStyle: 'normal', 
-        fontSize: '19px', 
-        color: 'black', 
-        top: '1739px', 
-        width: '927px',
-        zIndex: 6
-      }} data-enter data-enter-order="7">
-        <p style={{ margin: 0 }}>In the initial analysis (May 2021), the primary endpoint was met with statistically significant PFS</p>
-        <p style={{ margin: 0 }}>(HR=0.28 [95% CI 0.22–0.37, p&lt;0.001])2</p>
-      </div>
-      
-      {/* Button */}
-      <div 
-        style={{ 
-          position: 'absolute', 
-          height: '112px', 
-          top: '1615px', 
-          transform: 'translateX(-50%)', 
-          width: '699px', 
-          left: 'calc(50% - 0.5px)',
+      <div
+        style={{
+          position: "absolute",
+          fontFamily: "Inter, sans-serif",
+          fontWeight: "light",
+          lineHeight: "28px",
+          left: "74px",
+          fontStyle: "normal",
+          fontSize: "19px",
+          color: "black",
+          top: "1739px",
+          width: "927px",
           zIndex: 6,
-          cursor: 'pointer'
-        }} 
-        data-enter 
+        }}
+        data-enter
+        data-enter-order="7"
+        data-oid="m3-d3c."
+      >
+        <p style={{ margin: 0 }} data-oid="vhlexdc">
+          In the initial analysis (May 2021), the primary endpoint was met with
+          statistically significant PFS
+        </p>
+        <p style={{ margin: 0 }} data-oid=":qkt.g.">
+          (HR=0.28 [95% CI 0.22–0.37, p&lt;0.001])2
+        </p>
+      </div>
+
+      {/* Button */}
+      <div
+        style={{
+          position: "absolute",
+          height: "112px",
+          top: "1615px",
+          transform: "translateX(-50%)",
+          width: "699px",
+          left: "calc(50% - 0.5px)",
+          zIndex: 6,
+          cursor: "pointer",
+        }}
+        data-enter
         data-enter-order="8"
         onClick={onInternationalGuidanceClick}
+        data-oid="ylb6rjk"
       >
-        <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-          <div style={{ position: 'absolute', bottom: 0, left: '0.29%', right: 0, top: '0.89%' }}>
-            <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={img} />
+        <div
+          style={{ position: "relative", width: "100%", height: "100%" }}
+          data-oid="-vs7gpd"
+        >
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: "0.29%",
+              right: 0,
+              top: "0.89%",
+            }}
+            data-oid="l4nf:gc"
+          >
+            <img
+              alt=""
+              style={{
+                display: "block",
+                maxWidth: "none",
+                width: "100%",
+                height: "100%",
+              }}
+              src={img}
+              data-oid="nc.nnhl"
+            />
           </div>
-          <div style={{ position: 'absolute', bottom: 0, left: 0, right: '82.4%', top: 0 }}>
-            <img alt="" style={{ display: 'block', maxWidth: 'none', width: '100%', height: '100%' }} src={img1} />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: "82.4%",
+              top: 0,
+            }}
+            data-oid="s5c-zkq"
+          >
+            <img
+              alt=""
+              style={{
+                display: "block",
+                maxWidth: "none",
+                width: "100%",
+                height: "100%",
+              }}
+              src={img1}
+              data-oid=":-2g8s5"
+            />
           </div>
-          <div style={{ 
-            position: 'absolute',
-            fontFamily: 'Inter, sans-serif',
-            fontWeight: 'bold',
-            fontSize: '31px',
-            textAlign: 'center',
-            color: 'white',
-            top: '28.57%',
-            left: '17.6%',
-            right: '4.15%',
-            bottom: '28.57%'
-          }}>
-            <p style={{ margin: 0, lineHeight: '54px' }}>AE Preventive measures</p>
+          <div
+            style={{
+              position: "absolute",
+              fontFamily: "Inter, sans-serif",
+              fontWeight: "bold",
+              fontSize: "31px",
+              textAlign: "center",
+              color: "white",
+              top: "28.57%",
+              left: "17.6%",
+              right: "4.15%",
+              bottom: "28.57%",
+            }}
+            data-oid="sh:q3ue"
+          >
+            <p style={{ margin: 0, lineHeight: "54px" }} data-oid="j.vbusp">
+              AE Preventive measures
+            </p>
           </div>
         </div>
       </div>
-      
+
       {/* Footer */}
-      <div style={{ 
-        position: 'absolute', 
-        fontFamily: 'Inter, sans-serif', 
-        fontWeight: 'bold', 
-        lineHeight: '15px', 
-        left: '73px', 
-        fontStyle: 'normal', 
-        fontSize: '12px', 
-        color: 'black', 
-        top: '1800px', 
-        width: '927px',
-        zIndex: 6
-      }}>
-        <p style={{ margin: 0 }}>Updated PFS analysis was not tested for statistical significance and not powered to show differences between treatment arms.1</p>
-        <p style={{ margin: 0 }}>OS IA2 25 July 2022; median follow-up of 28.4 months in the ENHERTU arm, and 26.5 months in the T-DM1 arm.1</p>
-        <p style={{ margin: 0 }}>BICR, Blinded Independent Central Review; CI, confidence interval; HER2, human epidermal growth factor receptor 2; HR, hazard ratio; IA, interim analysis; mBC, metastatic breast cancer; mPFS, median progression-free survival; NE, not estimable; NR, not reached; OS, overall survival; T-DM1, trastuzumab emtansine.</p>
-        <p style={{ margin: 0 }}>1. Hurvitz SA, et al. Lancet. 2023;401:105–117; 2. Cortés J, et al. N Engl J Med. 2022;386:1143–1154.</p>
+      <div
+        style={{
+          position: "absolute",
+          fontFamily: "Inter, sans-serif",
+          fontWeight: "bold",
+          lineHeight: "15px",
+          left: "73px",
+          fontStyle: "normal",
+          fontSize: "12px",
+          color: "black",
+          top: "1800px",
+          width: "927px",
+          zIndex: 6,
+        }}
+        data-oid="9n0s37:"
+      >
+        <p style={{ margin: 0 }} data-oid="._c_njh">
+          Updated PFS analysis was not tested for statistical significance and
+          not powered to show differences between treatment arms.1
+        </p>
+        <p style={{ margin: 0 }} data-oid="as112:p">
+          OS IA2 25 July 2022; median follow-up of 28.4 months in the ENHERTU
+          arm, and 26.5 months in the T-DM1 arm.1
+        </p>
+        <p style={{ margin: 0 }} data-oid="wdm5949">
+          BICR, Blinded Independent Central Review; CI, confidence interval;
+          HER2, human epidermal growth factor receptor 2; HR, hazard ratio; IA,
+          interim analysis; mBC, metastatic breast cancer; mPFS, median
+          progression-free survival; NE, not estimable; NR, not reached; OS,
+          overall survival; T-DM1, trastuzumab emtansine.
+        </p>
+        <p style={{ margin: 0 }} data-oid="261a:t-">
+          1. Hurvitz SA, et al. Lancet. 2023;401:105–117; 2. Cortés J, et al. N
+          Engl J Med. 2022;386:1143–1154.
+        </p>
       </div>
     </div>
   );

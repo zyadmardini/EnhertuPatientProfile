@@ -11,344 +11,381 @@ interface Hala10Props {
   onHomeClick: () => void;
 }
 
-export default function Hala10({ onContinueClick, onBackClick, onHomeClick }: Hala10Props) {
+export default function Hala10({
+  onContinueClick,
+  onBackClick,
+  onHomeClick,
+}: Hala10Props) {
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '1080px', 
-      height: '1920px', 
-      backgroundColor: '#ffffff'
-    }}>
+    <div
+      style={{
+        position: "relative",
+        width: "1080px",
+        height: "1920px",
+        backgroundColor: "#ffffff",
+      }}
+      data-oid="03607j6"
+    >
       {/* Navigation Buttons */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          left: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onBackClick}
+        data-oid="7di5lpz"
       >
         ←
       </div>
 
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          right: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onHomeClick}
+        data-oid="1bnikmb"
       >
         ⌂
       </div>
 
       {/* Header background */}
-      <div 
+      <div
         data-enter
-        style={{ 
-          position: 'absolute',
-          left: '0px',
-          top: '0px',
-          width: '756px',
-          height: '27px',
-          background: 'linear-gradient(to right, #ec7624, #ffb061)',
-          zIndex: 2
+        style={{
+          position: "absolute",
+          left: "0px",
+          top: "0px",
+          width: "756px",
+          height: "27px",
+          background: "linear-gradient(to right, #ec7624, #ffb061)",
+          zIndex: 2,
         }}
+        data-oid="v5nywyy"
       />
 
       {/* Title */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.1"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '104px',
-          width: '782px',
-          height: '199px',
-          fontSize: '41px',
-          fontWeight: 'bold',
-          color: '#250858',
-          fontFamily: 'Inter, sans-serif',
-          lineHeight: '1.2',
-          zIndex: 3
+        style={{
+          position: "absolute",
+          left: "120px",
+          top: "123px",
+          width: "882px",
+          height: "199px",
+          fontSize: "41px",
+          fontWeight: "bold",
+          color: "#250858",
+          fontFamily: "Inter, sans-serif",
+          lineHeight: "1.2",
+          zIndex: 3,
         }}
+        data-oid="jfk2lte"
       >
-        Nausea, vomiting, fatigue and alopecia were the most common ENHERTU-related TEAEs observed in DESTINY-Breast04
+        Nausea, vomiting, fatigue and alopecia were the most common
+        ENHERTU-related TEAEs observed in DESTINY-Breast04
       </div>
 
       {/* HR+ & HR- Label */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.2"
-        style={{ 
-          position: 'absolute',
-          left: '96px',
-          top: '74px',
-          width: '97px',
-          height: '165px',
-          fontSize: '38px',
-          fontWeight: 'bold',
-          color: 'white',
-          fontFamily: 'Inter, sans-serif',
-          lineHeight: '1.2',
-          zIndex: 3
+        style={{
+          position: "absolute",
+          left: "55px",
+          top: "348px",
+          width: "203px",
+          height: "165px",
+          fontSize: "38px",
+          fontWeight: "bold",
+          color: "white",
+          fontFamily: "Inter, sans-serif",
+          lineHeight: "1.2",
+          zIndex: 6,
         }}
+        data-oid="tmh-odv"
       >
-        HR+<br />
-        &<br />
-        HR-
+        HR+ & HR-
       </div>
 
       {/* Vector Background */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.3"
-        style={{ 
-          position: 'absolute',
-          left: '61px',
-          top: '27px',
-          width: '138px',
-          height: '346px',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "0px",
+          top: "311px",
+          width: "346px",
+          height: "138px",
+          zIndex: 5,
         }}
+        data-oid="yl18_rh"
       >
-        <div 
-          style={{ 
-            width: '346px',
-            height: '138px',
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transformOrigin: 'center',
-            transform: 'translate(-50%, -50%) rotate(90deg)'
+        <img
+          src={imgVector}
+          alt="Vector background"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
           }}
-        >
-          <img 
-            src={imgVector} 
-            alt="Vector background" 
-            style={{ 
-              width: '100%', 
-              height: '100%',
-              objectFit: 'contain'
-            }} 
-          />
-        </div>
+          data-oid="tcm:49s"
+        />
       </div>
 
       {/* Subtitle */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.4"
-        style={{ 
-          position: 'absolute',
-          left: '72px',
-          top: '404px',
-          width: '935px',
-          height: '56px',
-          fontSize: '25px',
-          fontWeight: 'bold',
-          color: '#5d6771',
-          fontFamily: 'Inter, sans-serif',
-          lineHeight: '1.1',
-          zIndex: 3
+        style={{
+          position: "absolute",
+          left: "73px",
+          top: "482px",
+          width: "935px",
+          height: "56px",
+          fontSize: "25px",
+          fontWeight: "bold",
+          color: "#5d6771",
+          fontFamily: "Inter, sans-serif",
+          lineHeight: "1.1",
+          zIndex: 3,
         }}
+        data-oid="e5:-r21"
       >
-        Most common drug-related TEAEs (in ≥20% of patients) in the safety analysis set
+        Most common drug-related TEAEs (in ≥20% of patients) in the safety
+        analysis set
       </div>
 
       {/* Main Graph */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.5"
-        style={{ 
-          position: 'absolute',
-          left: '72px',
-          top: '528px',
-          width: '935px',
-          height: '438px',
+        style={{
+          position: "absolute",
+          left: "72px",
+          top: "586px",
+          width: "935px",
+          height: "438px",
           backgroundImage: `url('${imgGraph131}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          zIndex: 4
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          zIndex: 4,
         }}
+        data-oid="b12-zkt"
       />
 
       {/* Bottom Image */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.6"
-        style={{ 
-          position: 'absolute',
-          left: '75px',
-          top: '991px',
-          width: '498px',
-          height: '156px',
+        style={{
+          position: "absolute",
+          left: "75px",
+          top: "1049px",
+          width: "498px",
+          height: "156px",
           backgroundImage: `url('${imgImage6}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          zIndex: 4
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          zIndex: 4,
         }}
+        data-oid="f:hdwd4"
       />
 
       {/* Info Box */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.7"
-        style={{ 
-          position: 'absolute',
-          left: '75px',
-          top: '1207px',
-          width: '934px',
-          height: '116px',
-          backgroundColor: '#f3f7d9',
-          border: '4px solid #c5d752',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "75px",
+          top: "1265px",
+          width: "934px",
+          height: "116px",
+          backgroundColor: "#f3f7d9",
+          border: "4px solid #c5d752",
+          zIndex: 5,
         }}
+        data-oid="zy1o2rh"
       >
-        <div 
-          style={{ 
-            position: 'absolute',
-            left: '9px',
-            top: '26px',
-            width: '916px',
-            height: '110px',
-            fontSize: '24px',
-            fontWeight: '500',
-            color: '#5d6771',
-            fontFamily: 'Inter, sans-serif',
-            lineHeight: '1.2',
-            zIndex: 6
+        <div
+          style={{
+            position: "absolute",
+            left: "9px",
+            top: "26px",
+            width: "916px",
+            height: "110px",
+            fontSize: "24px",
+            fontWeight: "500",
+            color: "#5d6771",
+            fontFamily: "Inter, sans-serif",
+            lineHeight: "1.2",
+            zIndex: 6,
           }}
+          data-oid="1u7tz.7"
         >
-          Nausea, vomiting, fatigue and alopecia were the most common ENHERTU-related AEs observed in DESTINY-Breast04
+          Nausea, vomiting, fatigue and alopecia were the most common
+          ENHERTU-related AEs observed in DESTINY-Breast04
         </div>
       </div>
 
       {/* Treatment Button */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.8"
-        style={{ 
-          position: 'absolute',
-          left: '190px',
-          top: '1615px',
-          width: '699px',
-          height: '112px',
-          cursor: 'pointer',
-          zIndex: 100
+        style={{
+          position: "absolute",
+          left: "190px",
+          top: "1593px",
+          width: "699px",
+          height: "112px",
+          cursor: "pointer",
+          zIndex: 100,
         }}
         onClick={onContinueClick}
+        data-oid="d2igeuc"
       >
-        <img 
-          src={imgButton} 
-          alt="Treatment button" 
-          style={{ 
-            width: '100%', 
-            height: '100%',
-            objectFit: 'contain'
-          }} 
-        />
-        <div 
-          style={{ 
-            position: 'absolute',
-            left: '123px',
-            top: '32px',
-            width: '453px',
-            height: '48px',
-            fontSize: '31px',
-            fontWeight: 'bold',
-            color: 'white',
-            fontFamily: 'Inter, sans-serif',
-            textAlign: 'center',
-            lineHeight: '54px',
-            zIndex: 101
+        <img
+          src={imgButton}
+          alt="Treatment button"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
           }}
+          data-oid="d-nc99a"
+        />
+
+        <div
+          style={{
+            position: "absolute",
+            left: "123px",
+            top: "32px",
+            width: "453px",
+            height: "48px",
+            fontSize: "31px",
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Inter, sans-serif",
+            textAlign: "center",
+            lineHeight: "54px",
+            zIndex: 101,
+          }}
+          data-oid="4l2fbny"
         >
           Suspected ILD monitoring
         </div>
-        <div 
-          style={{ 
-            position: 'absolute',
-            left: '0px',
-            top: '0px',
-            width: '115px',
-            height: '112px',
-            zIndex: 101
+        <div
+          style={{
+            position: "absolute",
+            left: "0px",
+            top: "0px",
+            width: "115px",
+            height: "112px",
+            zIndex: 101,
           }}
+          data-oid="vmzvog4"
         >
-          <img 
-            src={imgIcon} 
-            alt="Button icon" 
-            style={{ 
-              width: '100%', 
-              height: '100%',
-              objectFit: 'contain'
-            }} 
+          <img
+            src={imgIcon}
+            alt="Button icon"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+            }}
+            data-oid="unptbz2"
           />
         </div>
       </div>
 
       {/* Footer Text */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.9"
-        style={{ 
-          position: 'absolute',
-          left: '74px',
-          top: '1740px',
-          width: '927px',
-          height: '151px',
-          fontSize: '11px',
-          fontWeight: '500',
-          color: 'black',
-          fontFamily: 'Inter, sans-serif',
-          lineHeight: '1.4',
-          zIndex: 6
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "1740px",
+          width: "927px",
+          height: "151px",
+          fontSize: "11px",
+          fontWeight: "500",
+          color: "black",
+          fontFamily: "Inter, sans-serif",
+          lineHeight: "1.4",
+          zIndex: 6,
         }}
+        data-oid="rgugsgv"
       >
-        <div style={{ marginBottom: '4px', fontWeight: 'bold' }}>
+        <div
+          style={{ marginBottom: "4px", fontWeight: "bold" }}
+          data-oid="ts:ga:0"
+        >
           Adapted from Modi 2023.
         </div>
-        <div style={{ marginBottom: '4px' }}>
-          Shown are AEs that emerged or worsened after initiation of a trial drug until 47 days after the last dose of the trial drug and that were adjudicated as being related to a trial drug by an independent committee. Median treatment duration was 8.2 months (range, 0.2–39.1 months) for T-DXd and 3.5 months (range, 0.3-19.7 months) for TPC. 16.4% of patients underwent treatment for ≥18 months in the T-DXd arm compared with 1.2% of patients in the TPC arm.
+        <div style={{ marginBottom: "4px" }} data-oid="7tj9dco">
+          Shown are AEs that emerged or worsened after initiation of a trial
+          drug until 47 days after the last dose of the trial drug and that were
+          adjudicated as being related to a trial drug by an independent
+          committee. Median treatment duration was 8.2 months (range, 0.2–39.1
+          months) for T-DXd and 3.5 months (range, 0.3-19.7 months) for TPC.
+          16.4% of patients underwent treatment for ≥18 months in the T-DXd arm
+          compared with 1.2% of patients in the TPC arm.
         </div>
-        <div style={{ marginBottom: '4px' }}>
-          *This category includes the preferred terms fatigue, asthenia, and malaise; †This category includes the preferred terms aspartate aminotransferase increased, alanine aminotransferase increased, gamma-glutamyltransferase increased, and hepatic function abnormal; ‡This category includes the preferred terms neutrophil count decreased and neutropenia; §This category includes the preferred terms haemoglobin decreased, red-cell count decreased, anaemia, and haematocrit decreased; ¶This category includes the preferred terms platelet count decreased and thrombocytopenia; IIThis category includes the preferred terms white-cell count decreased and leukopenia.
+        <div style={{ marginBottom: "4px" }} data-oid="ou3v1qc">
+          *This category includes the preferred terms fatigue, asthenia, and
+          malaise; †This category includes the preferred terms aspartate
+          aminotransferase increased, alanine aminotransferase increased,
+          gamma-glutamyltransferase increased, and hepatic function abnormal;
+          ‡This category includes the preferred terms neutrophil count decreased
+          and neutropenia; §This category includes the preferred terms
+          haemoglobin decreased, red-cell count decreased, anaemia, and
+          haematocrit decreased; ¶This category includes the preferred terms
+          platelet count decreased and thrombocytopenia; IIThis category
+          includes the preferred terms white-cell count decreased and
+          leukopenia.
         </div>
-        <div style={{ marginBottom: '4px' }}>
-          2L, second line; ET, endocrine therapy; HER2, human epidermal growth factor receptor 2; mBC, metastatic breast cancer; TEAE, treatment-emergent adverse event.
+        <div style={{ marginBottom: "4px" }} data-oid="v:.3sr_">
+          2L, second line; ET, endocrine therapy; HER2, human epidermal growth
+          factor receptor 2; mBC, metastatic breast cancer; TEAE,
+          treatment-emergent adverse event.
         </div>
-        <div>
-          Modi S, et al. Presented at ESMO Annual Meeting 2023, 20–24 October. Madrid, Spain. Abstract 376O.
+        <div data-oid="641zyqr">
+          Modi S, et al. Presented at ESMO Annual Meeting 2023, 20–24 October.
+          Madrid, Spain. Abstract 376O.
         </div>
       </div>
     </div>

@@ -9,325 +9,364 @@ interface Layla6Props {
   onOptionClick: (option: string) => void;
 }
 
-export default function Layla6({ onBackClick, onHomeClick, onOptionClick }: Layla6Props) {
+export default function Layla6({
+  onBackClick,
+  onHomeClick,
+  onOptionClick,
+}: Layla6Props) {
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '1080px', 
-      height: '1920px', 
-      backgroundColor: '#ffffff'
-    }}>
+    <div
+      style={{
+        position: "relative",
+        width: "1080px",
+        height: "1920px",
+        backgroundColor: "#ffffff",
+      }}
+      data-oid="lob.5vp"
+    >
       {/* Navigation Buttons */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          left: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onBackClick}
+        data-oid="nhvvlz:"
       >
         ←
       </div>
 
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          right: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onHomeClick}
+        data-oid="pw.rvkr"
       >
         ⌂
       </div>
 
       {/* Header background */}
-      <div 
+      <div
         data-enter
         data-enter-order="1"
-        style={{ 
-          position: 'absolute',
-          left: '0px',
-          top: '0px',
-          width: '756px',
-          height: '27px',
-          background: 'linear-gradient(to right, #ec7624, #ffb061)',
-          zIndex: 2
+        style={{
+          position: "absolute",
+          left: "0px",
+          top: "0px",
+          width: "756px",
+          height: "27px",
+          background: "linear-gradient(to right, #ec7624, #ffb061)",
+          zIndex: 2,
         }}
+        data-oid="sw7xul-"
       />
 
       {/* Title */}
-      <div 
+      <div
         data-enter
         data-enter-order="2"
-        style={{ 
-          position: 'absolute',
-          left: '76px',
-          top: '166px',
-          width: '656px',
-          height: '80px',
-          fontFamily: 'Inter, sans-serif',
-          fontWeight: 'bold',
-          fontSize: '50px',
-          color: '#5b6670',
-          lineHeight: 'normal',
-          zIndex: 6
+        style={{
+          position: "absolute",
+          left: "76px",
+          top: "166px",
+          width: "656px",
+          height: "80px",
+          fontFamily: "Inter, sans-serif",
+          fontWeight: "bold",
+          fontSize: "50px",
+          color: "#5b6670",
+          lineHeight: "normal",
+          zIndex: 6,
         }}
+        data-oid=".wky2pu"
       >
         Interactive Question
       </div>
 
       {/* Icon Container */}
-      <div 
+      <div
         data-enter
         data-enter-order="3"
-        style={{ 
-          position: 'absolute',
-          left: '74px',
-          top: '362px',
-          width: '927px',
-          height: '176px',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "362px",
+          width: "927px",
+          height: "176px",
+          zIndex: 1,
         }}
+        data-oid=":fw.ld."
       >
-        <img 
-          src={imgIconContainer} 
+        <img
+          src={imgIconContainer}
           alt="Icon Container"
-          style={{ 
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain'
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
           }}
+          data-oid=":.3drs5"
         />
       </div>
 
       {/* Icon */}
-      <div 
+      <div
         data-enter
         data-enter-order="4"
-        style={{ 
-          position: 'absolute',
-          left: '74px',
-          top: '361px',
-          width: '123px',
-          height: '112px',
-          zIndex: 4
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "361px",
+          width: "123px",
+          height: "112px",
+          zIndex: 4,
         }}
+        data-oid="csnsakn"
       >
-        <div style={{ 
-          position: 'absolute',
-          left: '1.03%',
-          right: '7.47%',
-          top: '0%',
-          bottom: '0%'
-        }}>
-          <img 
-            src={img} 
+        <div
+          style={{
+            position: "absolute",
+            left: "1.03%",
+            right: "7.47%",
+            top: "0%",
+            bottom: "0%",
+          }}
+          data-oid="orm2fut"
+        >
+          <img
+            src={img}
             alt="Vector"
-            style={{ 
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain'
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
             }}
+            data-oid="t2kv4:x"
           />
         </div>
-        <div style={{ 
-          position: 'absolute',
-          left: '0%',
-          right: '30.68%',
-          top: '7.02%',
-          bottom: '7.92%'
-        }}>
-          <img 
-            src={img1} 
+        <div
+          style={{
+            position: "absolute",
+            left: "0%",
+            right: "30.68%",
+            top: "7.02%",
+            bottom: "7.92%",
+          }}
+          data-oid="hhkh5dc"
+        >
+          <img
+            src={img1}
             alt="Group"
-            style={{ 
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain'
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
             }}
+            data-oid="g7aosgc"
           />
         </div>
       </div>
 
       {/* Question */}
-      <div 
+      <div
         data-enter
         data-enter-order="5"
-        style={{ 
-          position: 'absolute',
-          left: '244px',
-          top: '395px',
-          width: '691px',
-          height: '123px',
-          fontFamily: 'Inter, sans-serif',
-          fontWeight: 'bold',
-          fontSize: '38px',
-          color: '#250858',
-          lineHeight: '54px',
-          zIndex: 6
+        style={{
+          position: "absolute",
+          left: "244px",
+          top: "395px",
+          width: "691px",
+          height: "123px",
+          fontFamily: "Inter, sans-serif",
+          fontWeight: "bold",
+          fontSize: "38px",
+          color: "#250858",
+          lineHeight: "54px",
+          zIndex: 6,
         }}
+        data-oid="1euz__n"
       >
         What would be your choice for her treatment at this stage?
       </div>
 
       {/* Option 1 - Paclitaxel + Trastuzumab */}
-      <div 
+      <div
         data-enter
         data-enter-order="6"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '653px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "653px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 1,
         }}
-        onClick={() => onOptionClick('Paclitaxel + Trastuzumab')}
+        onClick={() => onOptionClick("Paclitaxel + Trastuzumab")}
+        data-oid="cv43-ym"
       >
-        <div style={{ 
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontFamily: 'Inter, sans-serif',
-          fontWeight: 'bold',
-          fontSize: '38px',
-          color: '#ffffff',
-          textAlign: 'center',
-          lineHeight: '54px',
-          whiteSpace: 'nowrap',
-          zIndex: 6
-        }}>
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "bold",
+            fontSize: "38px",
+            color: "#ffffff",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
+            zIndex: 6,
+          }}
+          data-oid="32yhokt"
+        >
           Paclitaxel + Trastuzumab
         </div>
       </div>
 
       {/* Option 2 - T-DM1 */}
-      <div 
+      <div
         data-enter
         data-enter-order="7"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '845px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "845px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 1,
         }}
-        onClick={() => onOptionClick('T-DM1')}
+        onClick={() => onOptionClick("T-DM1")}
+        data-oid="t6ei:b."
       >
-        <div style={{ 
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontFamily: 'Inter, sans-serif',
-          fontWeight: 'bold',
-          fontSize: '38px',
-          color: '#ffffff',
-          textAlign: 'center',
-          lineHeight: '54px',
-          whiteSpace: 'nowrap',
-          zIndex: 6
-        }}>
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "bold",
+            fontSize: "38px",
+            color: "#ffffff",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
+            zIndex: 6,
+          }}
+          data-oid="x9e81_h"
+        >
           T-DM1
         </div>
       </div>
 
       {/* Option 3 - Lapatinib + capecitabine */}
-      <div 
+      <div
         data-enter
         data-enter-order="8"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '1037px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "1037px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 1,
         }}
-        onClick={() => onOptionClick('Lapatinib + capecitabine')}
+        onClick={() => onOptionClick("Lapatinib + capecitabine")}
+        data-oid=":q_4f5o"
       >
-        <div style={{ 
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontFamily: 'Inter, sans-serif',
-          fontWeight: 'bold',
-          fontSize: '38px',
-          color: '#ffffff',
-          textAlign: 'center',
-          lineHeight: '54px',
-          whiteSpace: 'nowrap',
-          zIndex: 6
-        }}>
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "bold",
+            fontSize: "38px",
+            color: "#ffffff",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
+            zIndex: 6,
+          }}
+          data-oid="dlkkhq."
+        >
           Lapatinib + capecitabine
         </div>
       </div>
 
       {/* Option 4 - T-Dxd */}
-      <div 
+      <div
         data-enter
         data-enter-order="9"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '1229px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "1229px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 1,
         }}
-        onClick={() => onOptionClick('T-Dxd')}
+        onClick={() => onOptionClick("T-Dxd")}
+        data-oid="5u7774k"
       >
-        <div style={{ 
-          position: 'absolute',
-          left: '50%',
-          top: '50%',
-          transform: 'translate(-50%, -50%)',
-          fontFamily: 'Inter, sans-serif',
-          fontWeight: 'bold',
-          fontSize: '38px',
-          color: '#ffffff',
-          textAlign: 'center',
-          lineHeight: '54px',
-          whiteSpace: 'nowrap',
-          zIndex: 6
-        }}>
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontFamily: "Inter, sans-serif",
+            fontWeight: "bold",
+            fontSize: "38px",
+            color: "#ffffff",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
+            zIndex: 6,
+          }}
+          data-oid=".axej:7"
+        >
           T-Dxd
         </div>
       </div>

@@ -11,307 +11,335 @@ interface Hala4Props {
 
 function Group7() {
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '100%', 
-      height: '100%'
-    }}>
-      <div 
-        style={{ 
-          position: 'absolute',
-          left: '1.03%',
-          right: '7.47%',
-          top: '0px',
-          bottom: '0px',
-          zIndex: 1
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+      }}
+      data-oid="9jg4g_e"
+    >
+      <div
+        style={{
+          position: "absolute",
+          left: "1.03%",
+          right: "7.47%",
+          top: "0px",
+          bottom: "0px",
+          zIndex: 1,
         }}
+        data-oid="4yw8si9"
       >
-        <img 
-          src={imgVector} 
-          alt="Vector" 
-          style={{ 
-            width: '100%', 
-            height: '100%',
-            objectFit: 'contain'
-          }} 
+        <img
+          src={imgVector}
+          alt="Vector"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+          data-oid=":equ:zm"
         />
       </div>
-      <div 
-        style={{ 
-          position: 'absolute',
-          left: '0px',
-          right: '30.68%',
-          top: '7.02%',
-          bottom: '7.92%',
-          zIndex: 2
+      <div
+        style={{
+          position: "absolute",
+          left: "0px",
+          right: "30.68%",
+          top: "7.02%",
+          bottom: "7.92%",
+          zIndex: 2,
         }}
+        data-oid="_xtul9g"
       >
-        <img 
-          src={imgGroup} 
-          alt="Group" 
-          style={{ 
-            width: '100%', 
-            height: '100%',
-            objectFit: 'contain'
-          }} 
+        <img
+          src={imgGroup}
+          alt="Group"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+          data-oid=".xpq6f6"
         />
       </div>
     </div>
   );
 }
 
-export default function Hala4({ onContinueClick, onBackClick, onHomeClick }: Hala4Props) {
+export default function Hala4({
+  onContinueClick,
+  onBackClick,
+  onHomeClick,
+}: Hala4Props) {
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '1080px', 
-      height: '1920px', 
-      backgroundColor: '#ffffff'
-    }}>
+    <div
+      style={{
+        position: "relative",
+        width: "1080px",
+        height: "1920px",
+        backgroundColor: "#ffffff",
+      }}
+      data-oid="o.qgjb2"
+    >
       {/* Navigation Buttons */}
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          left: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          left: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onBackClick}
+        data-oid="8wqd0-e"
       >
         ←
       </div>
 
-      <div 
-        style={{ 
-          position: 'absolute',
-          top: '50px',
-          right: '50px',
-          width: '60px',
-          height: '60px',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
-          borderRadius: '50%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          fontSize: '24px',
-          fontWeight: 'bold',
-          color: '#5b6670',
+      <div
+        style={{
+          position: "absolute",
+          top: "50px",
+          right: "50px",
+          width: "60px",
+          height: "60px",
+          backgroundColor: "rgba(255, 255, 255, 0.9)",
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          fontSize: "24px",
+          fontWeight: "bold",
+          color: "#5b6670",
           zIndex: 100,
-          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)'
+          boxShadow: "0 2px 10px rgba(0, 0, 0, 0.1)",
         }}
         onClick={onHomeClick}
+        data-oid="a0uq8xt"
       >
         ⌂
       </div>
 
       {/* Header background */}
-      <div 
+      <div
         data-enter
-        style={{ 
-          position: 'absolute',
-          left: '0px',
-          top: '0px',
-          width: '756px',
-          height: '27px',
-          background: 'linear-gradient(to right, #ec7624, #ffb061)',
-          zIndex: 2
+        style={{
+          position: "absolute",
+          left: "0px",
+          top: "0px",
+          width: "756px",
+          height: "27px",
+          background: "linear-gradient(to right, #ec7624, #ffb061)",
+          zIndex: 2,
         }}
+        data-oid="hmpk.di"
       />
 
       {/* Title */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.1"
-        style={{ 
-          position: 'absolute',
-          left: '77px',
-          top: '166px',
-          width: '656px',
-          height: '80px',
-          fontSize: '50px',
-          fontWeight: 'bold',
-          color: '#5b6670',
-          fontFamily: 'Inter, sans-serif',
-          zIndex: 3
+        style={{
+          position: "absolute",
+          left: "77px",
+          top: "166px",
+          width: "656px",
+          height: "80px",
+          fontSize: "50px",
+          fontWeight: "bold",
+          color: "#5b6670",
+          fontFamily: "Inter, sans-serif",
+          zIndex: 3,
         }}
+        data-oid="e134l14"
       >
         Interactive Question
       </div>
 
       {/* Icon Container */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.2"
-        style={{ 
-          position: 'absolute',
-          left: '74px',
-          top: '362px',
-          width: '927px',
-          height: '176px',
-          zIndex: 1
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "362px",
+          width: "927px",
+          height: "176px",
+          zIndex: 1,
         }}
+        data-oid="qm9pdz."
       >
-        <img 
-          src={imgIconContainer} 
-          alt="Icon container" 
-          style={{ 
-            width: '100%', 
-            height: '100%',
-            objectFit: 'contain'
-          }} 
+        <img
+          src={imgIconContainer}
+          alt="Icon container"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+          }}
+          data-oid="az1i9g9"
         />
       </div>
 
       {/* Icon */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.3"
-        style={{ 
-          position: 'absolute',
-          left: '74px',
-          top: '361px',
-          width: '123px',
-          height: '112px',
-          zIndex: 4
+        style={{
+          position: "absolute",
+          left: "74px",
+          top: "361px",
+          width: "123px",
+          height: "112px",
+          zIndex: 4,
         }}
+        data-oid="39.8m.7"
       >
-        <Group7 />
+        <Group7 data-oid="wm0o8fz" />
       </div>
 
       {/* Question */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.4"
-        style={{ 
-          position: 'absolute',
-          left: '244px',
-          top: '395px',
-          width: '691px',
-          height: '123px',
-          fontSize: '38px',
-          fontWeight: 'bold',
-          color: '#250858',
-          fontFamily: 'Inter, sans-serif',
-          lineHeight: '1.4',
-          zIndex: 3
+        style={{
+          position: "absolute",
+          left: "244px",
+          top: "395px",
+          width: "691px",
+          height: "123px",
+          fontSize: "38px",
+          fontWeight: "bold",
+          color: "#250858",
+          fontFamily: "Inter, sans-serif",
+          lineHeight: "1.4",
+          zIndex: 3,
         }}
+        data-oid="azlw4z:"
       >
         What would be your choice for her treatment at this stage?
       </div>
 
       {/* Option 1 */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.5"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '653px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 6
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "653px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 6,
         }}
         onClick={onContinueClick}
+        data-oid=".9dk49w"
       >
-        <div 
-          style={{ 
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: '38px',
-            fontWeight: 'bold',
-            color: 'white',
-            fontFamily: 'Inter, sans-serif',
-            textAlign: 'center',
-            lineHeight: '54px',
-            whiteSpace: 'nowrap'
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: "38px",
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Inter, sans-serif",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
           }}
+          data-oid="ei5zs3i"
         >
           Taxan
         </div>
       </div>
 
       {/* Option 2 */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.6"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '845px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 6
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "845px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 6,
         }}
         onClick={onContinueClick}
+        data-oid="1vyu1kn"
       >
-        <div 
-          style={{ 
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: '38px',
-            fontWeight: 'bold',
-            color: 'white',
-            fontFamily: 'Inter, sans-serif',
-            textAlign: 'center',
-            lineHeight: '54px',
-            whiteSpace: 'nowrap'
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: "38px",
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Inter, sans-serif",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
           }}
+          data-oid="5mq:mqg"
         >
           Taxan + pembrolizumab
         </div>
       </div>
 
       {/* Option 3 */}
-      <div 
+      <div
         data-enter
         data-enter-delay="0.7"
-        style={{ 
-          position: 'absolute',
-          left: '222px',
-          top: '1037px',
-          width: '636px',
-          height: '130px',
-          backgroundColor: '#9f9f9f',
-          cursor: 'pointer',
-          zIndex: 6
+        style={{
+          position: "absolute",
+          left: "222px",
+          top: "1037px",
+          width: "636px",
+          height: "130px",
+          backgroundColor: "#9f9f9f",
+          cursor: "pointer",
+          zIndex: 6,
         }}
         onClick={onContinueClick}
+        data-oid="dkv10fm"
       >
-        <div 
-          style={{ 
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            fontSize: '38px',
-            fontWeight: 'bold',
-            color: 'white',
-            fontFamily: 'Inter, sans-serif',
-            textAlign: 'center',
-            lineHeight: '54px',
-            whiteSpace: 'nowrap'
+        <div
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: "38px",
+            fontWeight: "bold",
+            color: "white",
+            fontFamily: "Inter, sans-serif",
+            textAlign: "center",
+            lineHeight: "54px",
+            whiteSpace: "nowrap",
           }}
+          data-oid="h-6bsl6"
         >
           T-Dxd
         </div>
