@@ -111,7 +111,9 @@ export default function Hala8({
         }}
         data-oid="bnbvv0j"
       >
-        ENHERTU tripled cORR vs. chemotherapy
+        ENHERTU  <span style={{ color: "#ee7623" }} data-oid="7v-_kmo">
+          tripled cORR
+        </span> vs. chemotherapy
       </div>
 
       {/* HR- Label */}
