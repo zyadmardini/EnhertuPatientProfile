@@ -195,9 +195,9 @@ export default function Samira10({
         <div
           style={{
             position: "absolute",
-            left: "366px",
+            left: "356px",
             top: "191px",
-            width: "523px",
+            width: "545px",
             height: "175px",
             fontFamily: "Inter, sans-serif",
             fontWeight: "bold",
@@ -217,8 +217,8 @@ export default function Samira10({
               }}
               data-oid=":l3vmc1"
             >
-              - In July 2023, patient showed signs of Grade 1 ILD/pneumonitis
-              with thickening at
+              In July 2023, patient showed signs of Grade 1 ILD/pneumonitis
+              with thickening at the right upper lobe of the lung in a chest CT scan
             </li>
           </ul>
         </div>
@@ -228,7 +228,7 @@ export default function Samira10({
           style={{
             position: "absolute",
             left: "6px",
-            top: "388px",
+            top: "430px",
             width: "901px",
             height: "303px",
             fontFamily: "Inter, sans-serif",
@@ -244,7 +244,7 @@ export default function Samira10({
             style={{ fontWeight: "700", margin: "25px 0 0 43px" }}
             data-oid="y3ax-ak"
           >
-            the right upper lobe of the lung in a chest CT scan
+     
           </div>
           <ul style={{ margin: 0, paddingLeft: "46.5px" }} data-oid="mx__zl2">
             <li
@@ -255,14 +255,14 @@ export default function Samira10({
               }}
               data-oid="joh9sjt"
             >
-              - ENHERTU was withheld as per local guidelines for Grade 1
-              ILD/pneumonitis1
+              ENHERTU was withheld as per local guidelines for Grade 1
+              ILD/pneumonitis<sup>1</sup>
             </li>
             <li
               style={{ listStyleType: "disc", fontWeight: "700" }}
               data-oid="x4sje0_"
             >
-              - Corticosteroid therapy was started with methylprednisolone 0.5
+             Corticosteroid therapy was started with methylprednisolone 0.5
               mg/kg/day
             </li>
           </ul>

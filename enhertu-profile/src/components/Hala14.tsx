@@ -245,7 +245,7 @@ export default function Hala14({
         }}
         data-oid="hxdb3m9"
       >
-        Post Cycle 3
+        Cycle 4 withheld 
       </div>
 
       {/* Post Cycle 3 pneumonitis label */}
@@ -256,7 +256,7 @@ export default function Hala14({
           position: "absolute",
           top: "745px",
           left: "540px",
-          width: "244px",
+          width: "462px",
           height: "58px",
           backgroundColor: "#250858",
           transform: "rotate(0.378deg)",
@@ -270,9 +270,9 @@ export default function Hala14({
         data-enter-delay="0.4"
         style={{
           position: "absolute",
-          top: "752px",
+          top: "750px",
           left: "567px",
-          width: "183px",
+          width: "243px",
           height: "45px",
           fontFamily: "Inter, sans-serif",
           fontWeight: "bold",
@@ -283,7 +283,7 @@ export default function Hala14({
         }}
         data-oid="kqh65aj"
       >
-        Right upper lobe pneumonitis
+        Pneumonitis radiologically improved
       </div>
 
       {/* Post Cycle 3 image */}
@@ -400,7 +400,7 @@ export default function Hala14({
         }}
         data-oid="r5vu42a"
       >
-        Cycle 4 withheld
+        Post Cycle 3
       </div>
 
       {/* Cycle 4 pneumonitis label */}
@@ -411,7 +411,7 @@ export default function Hala14({
           position: "absolute",
           top: "1240px",
           left: "72px",
-          width: "247px",
+          width: "432px",
           height: "58px",
           backgroundColor: "#250858",
           transform: "rotate(0.378deg)",
@@ -425,9 +425,9 @@ export default function Hala14({
         data-enter-delay="0.7"
         style={{
           position: "absolute",
-          top: "1247px",
+          top: "1252px",
           left: "95px",
-          width: "183px",
+          width: "383px",
           height: "45px",
           fontFamily: "Inter, sans-serif",
           fontWeight: "bold",
@@ -521,7 +521,7 @@ export default function Hala14({
           position: "absolute",
           top: "1240px",
           left: "544px",
-          width: "269px",
+          width: "462px",
           height: "58px",
           backgroundColor: "#250858",
           transform: "rotate(0.378deg)",
@@ -535,9 +535,9 @@ export default function Hala14({
         data-enter-delay="0.9"
         style={{
           position: "absolute",
-          top: "1247px",
+          top: "1245px",
           left: "567px",
-          width: "183px",
+          width: "383px",
           height: "45px",
           fontFamily: "Inter, sans-serif",
           fontWeight: "bold",
@@ -548,7 +548,8 @@ export default function Hala14({
         }}
         data-oid=".j7l80p"
       >
-        Right upper lobe pneumonitis
+Resolved to Grade 0<br></br>
+(residual changes are scarring)
       </div>
 
       {/* Rechallenged image */}

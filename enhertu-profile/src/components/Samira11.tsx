@@ -181,7 +181,7 @@ export default function Samira11({
             left: "0px",
             top: "103px",
             width: "937px",
-            height: "495px",
+            height: "590px",
             backgroundColor: "#d5eff4",
             borderTopLeftRadius: "93px",
             zIndex: 1,
@@ -208,20 +208,20 @@ export default function Samira11({
         >
           <ul style={{ margin: 0, paddingLeft: "46.5px" }} data-oid="vb.:lpd">
             <li style={{ listStyleType: "disc" }} data-oid="m_tdoo-">
-              Treatment with ENHERTU was resumed at a reduced dose of 4.4 mg/kg,
-              as per local
+             Treatment with ENHERTU was resumed at a reduced dose of 4.4 mg/kg, as per local guidelines, upon full resolution of Grade 1 ILD/pneumonitis in September 2023
             </li>
+            
           </ul>
         </div>
 
         {/* Treatment content - Second paragraph */}
-        <div
+<div
           style={{
             position: "absolute",
-            left: "6px",
-            top: "388px",
-            width: "901px",
-            height: "135px",
+            left: "36px",
+            top: "538px",
+            width: "823px",
+            height: "175px",
             fontFamily: "Inter, sans-serif",
             fontWeight: "bold",
             fontSize: "31px",
@@ -229,12 +229,13 @@ export default function Samira11({
             lineHeight: "54px",
             zIndex: 6,
           }}
-          data-oid="l7g-.gv"
+          data-oid="9jpbro8"
         >
-          <p style={{ margin: 0 }} data-oid="aljdc39">
-            guidelines, upon full resolution of Grade 1 ILD/pneumonitis in
-            September 2023
-          </p>
+          <ul style={{ margin: 0, paddingLeft: "46.5px" }} data-oid="vb.:lpd">
+            <li style={{ listStyleType: "disc" }} data-oid="m_tdoo-">
+    As of January 2024, treatment with ENHERTU is ongoing with good tolerance            </li>
+            
+          </ul>
         </div>
       </div>
 

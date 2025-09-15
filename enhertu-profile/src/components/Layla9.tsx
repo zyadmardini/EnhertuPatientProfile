@@ -227,13 +227,13 @@ export default function Layla9({
           data-oid="6eh95eb"
         >
           <ul
-            style={{ listStyleType: "disc", marginLeft: "46.5px" }}
+            style={{ listStyleType: "disc", marginLeft: "30.5px" }}
             data-oid="fp2p9hq"
           >
             <li style={{ marginBottom: 0 }} data-oid="u_t6h5x">
               Treatment with ENHERTU began March 2022
             </li>
-            <li data-oid="0u._kfe">Prophylactic antiemetics (dexamethasone</li>
+            <li data-oid="0u._kfe">Prophylactic antiemetics (dexamethasone + ondansetron</li>
           </ul>
         </div>
 
@@ -244,7 +244,7 @@ export default function Layla9({
           style={{
             position: "absolute",
             left: "25px", // 97 - 72
-            top: "385px", // 661 - 276
+            top: "375px", // 661 - 276
             width: "864px",
             height: "89px",
             fontFamily: "Inter, sans-serif",
@@ -256,8 +256,8 @@ export default function Layla9({
           }}
           data-oid="j79:qbb"
         >
-          <p style={{ margin: 0 }} data-oid="6kj:r-h">
-            + ondansetron + aprepitant) were given to prevent nausea and
+          <p style={{ marginLeft: "345px" }} data-oid="6kj:r-h">
+            + aprepitant) were given to prevent nausea and
             vomiting
           </p>
         </div>

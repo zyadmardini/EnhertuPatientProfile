@@ -198,7 +198,7 @@ export default function Rawan2({
           position: "absolute",
           top: "630px",
           left: "541px",
-          width: "462px",
+          width: "442px",
           height: "240px",
           fontSize: "28px",
           fontStyle: "italic",
@@ -208,8 +208,8 @@ export default function Rawan2({
         }}
         data-oid="n66n:kn"
       >
-        ENHERTU demonstrated a clinically meaningful and statistically
-        significant improvement in PFS vs. T-DM1 in DESTINY-Breast031
+            HER2-staining 1+ <br></br>
+(10% of cells positive with weak, membranous, incomplete staining; 20x magnification)
       </div>
 
       {/* Treatment Image */}

@@ -400,9 +400,9 @@ export default function Rawan6({
         <div
           style={{
             position: "absolute",
-            top: "32px",
+            top: "22px",
             left: "195px",
-            width: "812px",
+            width: "800px",
             height: "28px",
             fontFamily: "Inter, sans-serif",
             fontWeight: "500",
@@ -416,16 +416,15 @@ export default function Rawan6({
         >
           <p style={{ margin: 0, lineHeight: "28px" }} data-oid="qjs2-z8">
             <span style={{ fontWeight: "bold" }} data-oid="ge38_0n">
-              HR status:
+              ILD/pneumonitis risk evaluation: baseline CT and pulmonary  function tests 
             </span>
-            <span data-oid="q6du5n7"> Positive (ER [100%], PR [70%])</span>
           </p>
         </div>
 
         <div
           style={{
             position: "absolute",
-            top: "157px",
+            top: "147px",
             left: "195px",
             width: "812px",
             height: "28px",
@@ -440,10 +439,7 @@ export default function Rawan6({
           data-oid="u.bsb.u"
         >
           <p style={{ margin: 0, lineHeight: "28px" }} data-oid="7jv-4a8">
-            <span style={{ fontWeight: "bold" }} data-oid="40c925x">
-              HR status:
-            </span>
-            <span data-oid="lex.5.:"> Positive (ER [100%], PR [70%])</span>
+            <span data-oid="lex.5.:"> Patient receives prophylactic antiemetics: 5-HT3 RA and dexamethasone</span>
           </p>
         </div>
 
@@ -465,10 +461,7 @@ export default function Rawan6({
           data-oid="xi-ztz0"
         >
           <p style={{ margin: 0, lineHeight: "28px" }} data-oid="m6sb46o">
-            <span style={{ fontWeight: "bold" }} data-oid="-cmkirv">
-              HR status:
-            </span>
-            <span data-oid="w_a9tfo"> Positive (ER [100%], PR [70%])</span>
+            <span data-oid="w_a9tfo"> 4L treatment: ENHERTU </span>
           </p>
         </div>
       </div>

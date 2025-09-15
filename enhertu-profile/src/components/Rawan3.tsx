@@ -237,7 +237,7 @@ export default function Rawan3({
         <div
           style={{
             position: "absolute",
-            top: "20px",
+            top: "30px",
             left: "195px",
             width: "812px",
             height: "57px",
@@ -249,8 +249,10 @@ export default function Rawan3({
           }}
           data-oid="x2rzt6-"
         >
-          71-year-old woman from Spain with invasive ductal carcinoma of the
-          right breast
+           <span style={{ fontWeight: "bold" }} data-oid="i25m53_">
+            1L treatment:
+          </span>{" "}
+          Letrozole + ribociclib + denosumab
         </div>
 
         {/* Row 2 */}
@@ -285,7 +287,7 @@ export default function Rawan3({
         <div
           style={{
             position: "absolute",
-            top: "145px",
+            top: "155px",
             left: "195px",
             width: "812px",
             height: "57px",
@@ -298,10 +300,9 @@ export default function Rawan3({
           data-oid="3qgzvwq"
         >
           <span style={{ fontWeight: "bold" }} data-oid="i25m53_">
-            Initial presentation:
+            Best Response:
           </span>{" "}
-          cT4b (27mm) cNx M1 (pleural, lymph nodes, bone, suspected liver
-          metastases)
+          Partial response
         </div>
 
         {/* Row 3 */}
@@ -336,7 +337,7 @@ export default function Rawan3({
         <div
           style={{
             position: "absolute",
-            top: "282px",
+            top: "272px",
             left: "195px",
             width: "812px",
             height: "28px",
@@ -349,9 +350,9 @@ export default function Rawan3({
           data-oid="kmfcs5p"
         >
           <span style={{ fontWeight: "bold" }} data-oid="lcadzjr">
-            HR status:
+           CT (24 mo):
           </span>{" "}
-          Positive (ER [100%], PR [70%])
+          After two years on treatment patient experienced progressive disease (lymph nodes, liver, lung)
         </div>
 
         {/* Row 4 */}
@@ -399,9 +400,9 @@ export default function Rawan3({
           data-oid="yuumsco"
         >
           <span style={{ fontWeight: "bold" }} data-oid="9l5.l76">
-            HER2 status:
+            2L treatment:
           </span>{" "}
-          HER2-low (IHC 1+)
+          Fulvestrant + alpelisib
         </div>
 
         {/* Row 5 */}
@@ -449,9 +450,9 @@ export default function Rawan3({
           data-oid="0xk6cr2"
         >
           <span style={{ fontWeight: "bold" }} data-oid="mycezum">
-            Ki-67:
+           Best response:
           </span>{" "}
-          40%, Grade 2
+          Partial response
         </div>
 
         {/* Row 6 */}
@@ -499,9 +500,9 @@ export default function Rawan3({
           data-oid="714:._r"
         >
           <span style={{ fontWeight: "bold" }} data-oid="c8i1ez9">
-            PIK3CA-mutation:
+            CT (8 mo):
           </span>{" "}
-          Exon 10
+           Progressive disease (liver)
         </div>
 
         {/* Icons */}

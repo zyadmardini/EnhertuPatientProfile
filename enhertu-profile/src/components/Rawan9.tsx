@@ -1,7 +1,7 @@
 // Image assets from Figma MCP
 const imgGraph081 = "/assets/5308bf9c3842d232b4da499991dbb79696081ea0.png";
 const imgImage6 = "/assets/cb9219dae840f64aebf4d517dded02642e02acc5.png";
-const imgVector = "/assets/fd146c4fe67459a60e7417374eecc063a3b335e8.svg";
+const imgVector = "/assets/16a3d4664de2e6504291187177cc8b08d83f80da.svg";
 const imgNextButton = "/assets/217d4bd4332d175179bf06dde168a7fa2cbf4b52.svg";
 const imgNextButtonGroup =
   "/assets/808348e90d52329741ef490ca5f364fe2b17660a.svg";
@@ -117,9 +117,9 @@ export default function Rawan9({
         data-enter-order="1"
         style={{
           position: "absolute",
-          top: "104px",
-          left: "222px",
-          width: "782px",
+          top: "70px",
+          left: "180px",
+          width: "760px",
           height: "182px",
           fontFamily: "Inter, sans-serif",
           fontWeight: "bold",
@@ -132,11 +132,8 @@ export default function Rawan9({
         data-oid="0j6e7ww"
       >
         <p style={{ margin: 0, lineHeight: "normal" }} data-oid="gzv9lw4">
-          <span data-oid="-nq5c9k">ENHERTU </span>
-          <span style={{ color: "#ee7623" }} data-oid="oeerwi6">
-            tripled cORR
-          </span>
-          <span data-oid="kxfhs_l"> vs. chemotherapy</span>
+          <span data-oid="-nq5c9k">The ENHERTU safety profile in HER2-low mBC was established  in DESTINY-Breast04</span>
+        
         </p>
       </div>
 
@@ -173,9 +170,9 @@ export default function Rawan9({
         data-enter-order="3"
         style={{
           position: "absolute",
-          top: "261px",
+          top: "248px",
           left: "94px",
-          width: "97px",
+          width: "120px",
           height: "59px",
           fontFamily: "Inter, sans-serif",
           fontWeight: "bold",
@@ -187,7 +184,7 @@ export default function Rawan9({
         data-node-id="159:1127"
       >
         <p style={{ margin: 0, lineHeight: "normal" }}>
-          HR+
+          HR+ & HR-
         </p>
       </div>
 

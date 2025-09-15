@@ -263,7 +263,7 @@ export default function Hala9({
             <div
               style={{
                 position: "absolute",
-                left: "12px",
+                left: "32px",
                 top: "26px",
                 width: "916px",
                 height: "110px",
@@ -275,8 +275,7 @@ export default function Hala9({
                 zIndex: 6,
               }}
             >
-              Nausea, vomiting, fatigue and alopecia were the most common ENHERTU-related AEs observed in DESTINY-Breast04
-            </div>
+HR– population data are descriptive and were not tested for statistical significance, nor powered to show a difference between treatment arms            </div>
           </div>
         </div>
 

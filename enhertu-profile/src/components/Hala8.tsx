@@ -133,7 +133,7 @@ export default function Hala8({
         }}
         data-oid="qg_q7oz"
       >
-        HR-
+        HR+
       </div>
 
       {/* Vector Background */}
