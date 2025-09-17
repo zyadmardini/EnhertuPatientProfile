@@ -110,30 +110,28 @@ export default function Rawan8({
       />
 
       {/* Main title */}
+         {/* Title */}
       <div
         data-enter
-        data-enter-order="1"
+        data-enter-delay="0.1"
         style={{
           position: "absolute",
-          top: "104px",
           left: "222px",
+          top: "104px",
           width: "782px",
           height: "182px",
-          fontFamily: "Inter, sans-serif",
-          fontWeight: "bold",
           fontSize: "41px",
+          fontWeight: "bold",
           color: "#250858",
-          lineHeight: "normal",
-          zIndex: 6,
+          fontFamily: "Inter, sans-serif",
+          lineHeight: "1.2",
+          zIndex: 3,
         }}
-        data-node-id="52:1534"
-        data-oid="vm05_f_"
+        data-oid="bnbvv0j"
       >
-        <p style={{ margin: 0, lineHeight: "normal" }} data-oid="ov5-xta">
-          The ENHERTU safety profile in HER2-low mBC was established
-          <br data-oid="2d:r785" />
-          in DESTINY-Breast04
-        </p>
+        ENHERTU  <span style={{ color: "#ee7623" }} data-oid="7v-_kmo">
+          tripled cORR
+        </span> vs. chemotherapy
       </div>
 
       {/* Vector icon */}
