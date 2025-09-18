@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { animateEnter } from "./animations/enter";
 import MainScreen from "./components/MainScreen";
+import TapToAdvance from "./components/TapToAdvance";
 import Samira1 from "./components/Samira1";
 import Samira2 from "./components/Samira2";
 import Samira3 from "./components/Samira3";
@@ -247,6 +248,110 @@ function App() {
     }
   };
 
+  // Function to get the next screen for tap navigation
+  const getNextScreenForTap = (): Screen | null => {
+    switch (currentScreen) {
+      // Main screen - no tap navigation (user should select a patient)
+      case "main":
+        return null;
+      
+      // Samira flow
+      case "samira1": return "samira2";
+      case "samira2": return "samira3";
+      case "samira3": return "samira4";
+      case "samira4": return "samira5";
+      case "samira5": return "samira6";
+      case "samira6": return "samira7";
+      case "samira7": return "samira8";
+      case "samira8": return "samira9";
+      case "samira9": return "samira10";
+      case "samira10": return "samira11";
+      case "samira11": return "endpage";
+      
+      // Layla flow
+      case "layla1": return "layla2";
+      case "layla2": return "layla3";
+      case "layla3": return "layla4";
+      case "layla4": return "layla5";
+      case "layla5": return "layla6";
+      case "layla6": return "layla7";
+      case "layla7": return "layla8";
+      case "layla8": return "layla9";
+      case "layla9": return "layla10";
+      case "layla10": return "layla11";
+      case "layla11": return "layla12";
+      case "layla12": return "layla13";
+      case "layla13": return "layla14";
+      case "layla14": return "endpage";
+      
+      // Rawan flow
+      case "rawan1": return "rawan2";
+      case "rawan2": return "rawan3";
+      case "rawan3": return "rawan4";
+      case "rawan4": return "rawan5";
+      case "rawan5": return "rawan6";
+      case "rawan6": return "rawan7";
+      case "rawan7": return "rawan8";
+      case "rawan8": return "rawan9";
+      case "rawan9": return "rawan10";
+      case "rawan10": return "rawan11";
+      case "rawan11": return "rawan12";
+      case "rawan12": return "rawan13";
+      case "rawan13": return "rawan14";
+      case "rawan14": return "rawan15";
+      case "rawan15": return "endpage";
+      
+      // Hala flow
+      case "hala1": return "hala2";
+      case "hala2": return "hala3";
+      case "hala3": return "hala4";
+      case "hala4": return "hala5";
+      case "hala5": return "hala6";
+      case "hala6": return "hala7";
+      case "hala7": return "hala8";
+      case "hala8": return "hala9";
+      case "hala9": return "hala10";
+      case "hala10": return "hala11";
+      case "hala11": return "hala12";
+      case "hala12": return "hala13";
+      case "hala13": return "hala14";
+      case "hala14": return "hala15";
+      case "hala15": return "endpage";
+      
+      // End page - tap to go back to main
+      case "endpage":
+        return "main";
+      
+      default:
+        return null;
+    }
+  };
+
+  // Handle tap to advance
+  const handleTapToAdvance = () => {
+    const nextScreen = getNextScreenForTap();
+    if (nextScreen) {
+      navigateToScreen(nextScreen);
+    }
+  };
+
+  // Helper function to render TapToAdvance component for screens that need it
+  const renderTapToAdvance = (screenName: Screen) => {
+    if (screenName === "main") {
+      return null; // No tap navigation for main screen
+    }
+    
+    return (
+      <TapToAdvance
+        onTap={handleTapToAdvance}
+        excludeAreas={[
+          { x: 50, y: 50, width: 60, height: 60 }, // Back button
+          { x: 970, y: 50, width: 60, height: 60 }, // Home button
+        ]}
+      />
+    );
+  };
+
   const navigateToScreen = (screen: Screen) => {
     if (currentScreen === screen || isTransitioning) return;
 
@@ -355,6 +460,8 @@ function App() {
             data-oid="0g7rs0q"
           />
         )}
+        {/* Tap to advance - disabled for main screen */}
+        {currentScreen === "main" && renderTapToAdvance("main")}
       </div>
 
       {/* Samira1 Screen */}
@@ -381,6 +488,8 @@ function App() {
             data-oid="ahkn3_j"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira1" && renderTapToAdvance("samira1")}
       </div>
 
       {/* Samira2 Screen */}
@@ -407,6 +516,8 @@ function App() {
             data-oid="_xq0u3o"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira2" && renderTapToAdvance("samira2")}
       </div>
 
       {/* Samira3 Screen */}
@@ -433,6 +544,8 @@ function App() {
             data-oid="550gkg4"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira3" && renderTapToAdvance("samira3")}
       </div>
 
       {/* Samira4 Screen */}
@@ -459,6 +572,8 @@ function App() {
             data-oid="zvybet3"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira4" && renderTapToAdvance("samira4")}
       </div>
 
       {/* Samira5 Screen */}
@@ -485,6 +600,8 @@ function App() {
             data-oid="b5nlp_s"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira5" && renderTapToAdvance("samira5")}
       </div>
 
       {/* Samira6 Screen */}
@@ -511,6 +628,8 @@ function App() {
             data-oid="7y1b:3_"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira6" && renderTapToAdvance("samira6")}
       </div>
 
       {/* Samira7 Screen */}
@@ -537,6 +656,8 @@ function App() {
             data-oid="p3tkmso"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira7" && renderTapToAdvance("samira7")}
       </div>
 
       {/* Samira8 Screen */}
@@ -563,6 +684,8 @@ function App() {
             data-oid="g5fofsm"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira8" && renderTapToAdvance("samira8")}
       </div>
 
       {/* Samira9 Screen */}
@@ -594,6 +717,8 @@ function App() {
             data-oid=":k0xasg"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira9" && renderTapToAdvance("samira9")}
       </div>
 
       {/* Samira10 Screen */}
@@ -620,6 +745,8 @@ function App() {
             data-oid="btpxphp"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "samira10" && renderTapToAdvance("samira10")}
       </div>
 
       {/* Samira11 Screen */}
@@ -646,6 +773,8 @@ function App() {
             data-oid="y.5:hgg"
           />
         )}
+``        {/* Tap to advance */}
+        {currentScreen === "samira11" && renderTapToAdvance("samira11")}
       </div>
 
       {/* Layla1 Screen */}
@@ -672,6 +801,8 @@ function App() {
             data-oid="qklrvgt"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla1" && renderTapToAdvance("layla1")}
       </div>
 
       {/* Layla2 Screen */}
@@ -698,6 +829,8 @@ function App() {
             data-oid="sehr.q:"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla2" && renderTapToAdvance("layla2")}
       </div>
 
       {/* Layla3 Screen */}
@@ -724,6 +857,8 @@ function App() {
             data-oid="vk7thot"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla3" && renderTapToAdvance("layla3")}
       </div>
 
       {/* Layla4 Screen */}
@@ -750,6 +885,8 @@ function App() {
             data-oid="lx710iv"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla4" && renderTapToAdvance("layla4")}
       </div>
 
       {/* Layla5 Screen */}
@@ -776,6 +913,8 @@ function App() {
             data-oid="xhkwo25"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla5" && renderTapToAdvance("layla5")}
       </div>
 
       {/* Layla6 Screen */}
@@ -805,6 +944,8 @@ function App() {
             data-oid="kgxoayb"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla6" && renderTapToAdvance("layla6")}
       </div>
 
       {/* Layla7 Screen */}
@@ -831,6 +972,8 @@ function App() {
             data-oid="ty1fxzr"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla7" && renderTapToAdvance("layla7")}
       </div>
 
       {/* Layla8 Screen */}
@@ -857,6 +1000,8 @@ function App() {
             data-oid="5_at-0x"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla8" && renderTapToAdvance("layla8")}
       </div>
 
       {/* Layla9 Screen */}
@@ -883,6 +1028,8 @@ function App() {
             data-oid="d0rkl2b"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla9" && renderTapToAdvance("layla9")}
       </div>
 
       {/* Layla10 Screen */}
@@ -909,6 +1056,8 @@ function App() {
             data-oid="4kvq4jd"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla10" && renderTapToAdvance("layla10")}
       </div>
 
       {/* Layla11 Screen */}
@@ -935,6 +1084,8 @@ function App() {
             data-oid="02nnf67"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla11" && renderTapToAdvance("layla11")}
       </div>
 
       {/* Layla12 Screen */}
@@ -961,6 +1112,8 @@ function App() {
             data-oid="5l4aex0"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla12" && renderTapToAdvance("layla12")}
       </div>
 
       {/* Layla13 Screen */}
@@ -987,6 +1140,8 @@ function App() {
             data-oid=":nmg9s-"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla13" && renderTapToAdvance("layla13")}
       </div>
 
       {/* Layla14 Screen */}
@@ -1013,6 +1168,8 @@ function App() {
             data-oid="mwzjl3t"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "layla14" && renderTapToAdvance("layla14")}
       </div>
 
       {/* Rawan1 Screen */}
@@ -1039,6 +1196,8 @@ function App() {
             data-oid="2gsoj7d"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan1" && renderTapToAdvance("rawan1")}
       </div>
 
       {/* Rawan2 Screen */}
@@ -1065,6 +1224,8 @@ function App() {
             data-oid="bdr3_c_"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan2" && renderTapToAdvance("rawan2")}
       </div>
 
       {/* Rawan3 Screen */}
@@ -1091,6 +1252,8 @@ function App() {
             data-oid="7yvyqqf"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan3" && renderTapToAdvance("rawan3")}
       </div>
 
       {/* Rawan4 Screen */}
@@ -1117,6 +1280,8 @@ function App() {
             data-oid="mzzu85y"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan4" && renderTapToAdvance("rawan4")}
       </div>
 
       {/* Rawan5 Screen */}
@@ -1143,6 +1308,8 @@ function App() {
             data-oid="xu7cfoi"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan5" && renderTapToAdvance("rawan5")}
       </div>
 
       {/* Rawan6 Screen */}
@@ -1169,6 +1336,8 @@ function App() {
             data-oid="470-pdr"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan6" && renderTapToAdvance("rawan6")}
       </div>
 
       {/* Rawan7 Screen */}
@@ -1195,6 +1364,8 @@ function App() {
             data-oid="ws_h.rn"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan7" && renderTapToAdvance("rawan7")}
       </div>
 
       {/* Rawan8 Screen */}
@@ -1221,6 +1392,8 @@ function App() {
             data-oid=":ctf7aa"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan8" && renderTapToAdvance("rawan8")}
       </div>
 
       {/* Rawan9 Screen */}
@@ -1247,6 +1420,8 @@ function App() {
             data-oid="y67wzbb"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan9" && renderTapToAdvance("rawan9")}
       </div>
 
       {/* Rawan10 Screen */}
@@ -1273,6 +1448,8 @@ function App() {
             data-oid="74xnky5"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan10" && renderTapToAdvance("rawan10")}
       </div>
 
       {/* Rawan11 Screen */}
@@ -1299,6 +1476,8 @@ function App() {
             data-oid="cjz1h:o"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan11" && renderTapToAdvance("rawan11")}
       </div>
 
       {/* Rawan12 Screen */}
@@ -1325,6 +1504,8 @@ function App() {
             data-oid="9xkpwjr"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan12" && renderTapToAdvance("rawan12")}
       </div>
 
       {/* Rawan13 Screen */}
@@ -1351,6 +1532,8 @@ function App() {
             data-oid="_xfmc4h"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan13" && renderTapToAdvance("rawan13")}
       </div>
 
       {/* Rawan14 Screen */}
@@ -1377,6 +1560,8 @@ function App() {
             data-oid="0ativq."
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan14" && renderTapToAdvance("rawan14")}
       </div>
 
       {/* Rawan15 Screen */}
@@ -1403,6 +1588,8 @@ function App() {
             data-oid="v8vw:88"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "rawan15" && renderTapToAdvance("rawan15")}
       </div>
 
       {/* Hala1 Screen */}
@@ -1429,6 +1616,8 @@ function App() {
             data-oid="2t581oq"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala1" && renderTapToAdvance("hala1")}
       </div>
 
       {/* Hala2 Screen */}
@@ -1455,6 +1644,8 @@ function App() {
             data-oid="qgy2n57"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala2" && renderTapToAdvance("hala2")}
       </div>
 
       {/* Hala3 Screen */}
@@ -1481,6 +1672,8 @@ function App() {
             data-oid="c-foyy4"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala3" && renderTapToAdvance("hala3")}
       </div>
 
       {/* Hala4 Screen */}
@@ -1507,6 +1700,8 @@ function App() {
             data-oid="vahn5ql"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala4" && renderTapToAdvance("hala4")}
       </div>
 
       {/* Hala5 Screen */}
@@ -1533,6 +1728,8 @@ function App() {
             data-oid="6mx6jc."
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala5" && renderTapToAdvance("hala5")}
       </div>
 
       {/* Hala6 Screen */}
@@ -1559,6 +1756,8 @@ function App() {
             data-oid=".u.6.k6"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala6" && renderTapToAdvance("hala6")}
       </div>
 
       {/* Hala7 Screen */}
@@ -1585,6 +1784,8 @@ function App() {
             data-oid="8v.pvcl"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala7" && renderTapToAdvance("hala7")}
       </div>
 
       {/* Hala8 Screen */}
@@ -1611,6 +1812,8 @@ function App() {
             data-oid="zeqy_62"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala8" && renderTapToAdvance("hala8")}
       </div>
 
       {/* Hala9 Screen */}
@@ -1637,6 +1840,8 @@ function App() {
             data-oid="erl9frl"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala9" && renderTapToAdvance("hala9")}
       </div>
 
       {/* Hala10 Screen */}
@@ -1663,6 +1868,8 @@ function App() {
             data-oid="-1qtu-1"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala10" && renderTapToAdvance("hala10")}
       </div>
 
       {/* Hala11 Screen */}
@@ -1689,6 +1896,8 @@ function App() {
             data-oid="wa0gnuu"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala11" && renderTapToAdvance("hala11")}
       </div>
 
       {/* Hala12 Screen */}
@@ -1715,6 +1924,8 @@ function App() {
             data-oid="xf2w2aw"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala12" && renderTapToAdvance("hala12")}
       </div>
 
       {/* Hala13 Screen */}
@@ -1741,6 +1952,8 @@ function App() {
             data-oid="w64.54d"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala13" && renderTapToAdvance("hala13")}
       </div>
 
       {/* Hala14 Screen */}
@@ -1767,6 +1980,8 @@ function App() {
             data-oid="phlr:yz"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala14" && renderTapToAdvance("hala14")}
       </div>
 
       {/* Hala15 Screen */}
@@ -1793,6 +2008,8 @@ function App() {
             data-oid="axi.va7"
           />
         )}
+        {/* Tap to advance */}
+        {currentScreen === "hala15" && renderTapToAdvance("hala15")}
       </div>
 
       {/* EndPage Screen */}
@@ -1818,6 +2035,8 @@ function App() {
             data-oid="2bir08r"
           />
         )}
+        {/* Tap to advance - goes back to main */}
+        {currentScreen === "endpage" && renderTapToAdvance("endpage")}
       </div>
     </div>
   );
